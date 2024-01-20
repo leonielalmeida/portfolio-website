@@ -13,109 +13,123 @@
   </head>
   <body>
         <header>
-            <picture>
-                <source media="(max-width:500px)" srcset="img/logo-la.png">
-                <img src="img/logo-la.png" alt="Leonie Almeida Logo">
-            </picture>
+            <div class="container">
+                <nav>
+                    <a href="index.html">
+                        <img src="img/logo-la.svg" svg height="200px" alt="Leonie Almeida Logo"/>
+                    </a>
+                    <ul class="navigation">
                     <nav>
                         <ul>
                           <li><a href="index.html">Work</a></li>
                           <li><a href="about.html">About</a></li>
                           <li><a href="#contact">Contact</a></li>
                         </ul>
-                      </nav>
+                    </nav>
+                </nav>
+            </div>
         </header>
+        
         <main>
             <div id="hero"><!-- open hero section -->
-                <div>
+                <div class="container">
                     <h1>Hi, I'm Leonie Almeida!<br></h1>
-                    <p> I'm a UI/UX Designer based in Houston, TX.</p>
+                    <h2> I'm a UI/UX Designer based in Houston, TX.</h2>
                     <p>My passion is curating the most visually pleasing designs and providing the most efficient experience for my users!</p>
                 </div>
             </div><!-- end hero section -->
 
-            <div id="work"><!-- open work section (1) -->
-                <div>
+            <div id="work">
+                <div class="container"><!-- open work section (1) -->
                     <h2>My Work</h2>
-                </div>
-                <div><!-- open row that holds (2) columns for project -->
-                    <div><!-- open first column (used for image) -->
-                        <picture>
-                            <source srcset="img/seedly/seedly-portfolio-thumbnail@1x.jpg" media="(max-width:767px)">
-                            <img src="img/seedly/seedly-portfolio-thumbnail@2x.jpg" alt="Seedly Thumbnail Image">
-                        </picture>
-                    </div><!-- end first column -->
-                    <div><!-- open second column (used for text) -->
-                        <h3>Seedly</h3><!-- heading for the project -->
-                        <p><!-- open paragraph -->
-                            Seedly is a native mobile application that was developed for both iOS and Android systems. I designed Seedly to be a plant app meant for anyone who has a passion for gardening, or wishes to take better care of their plants. These individuals need an outlet to gain knowledge and engage in better plant habits to allow them to have the garden of their dreams. 
-                        </p>
-                        <p>
-                            This project allowed me to vastly step outside my comfort zone and become familiar with both Apple Design Resources and Material Design. As using only iOS systems my entire life, this was exceptionally challenging but thoroughly exposed me to become just as familiar with Android systems also. I would say this project challenged me the most and showcases my design quality to the highest level.
-                        </p>
-                        <a href="seedly.html">Read More</a>
-                    </div><!-- end second column -->
-                </div><!-- end row that holds (2) columns for project -->
-            </div><!-- end work section (1) -->
+                    <div class="row">
+                        <div><!-- open row that holds (2) columns for project -->
+                            <div><!-- open first column (used for image) -->
+                                <picture>
+                                    <source srcset="img/seedly/seedly-portfolio-thumbnail@1x.jpg" media="(max-width:767px)">
+                                    <img src="img/seedly/seedly-portfolio-thumbnail@2x.jpg" alt="Seedly Thumbnail Image">
+                                </picture>
+                            </div><!-- end first column -->
+                            <div><!-- open second column (used for text) -->
+                                <h3>Seedly</h3><!-- heading for the project -->
+                                <p><!-- open paragraph -->
+                                    Seedly is a native mobile application that was developed for both iOS and Android systems. I designed Seedly to be a plant app meant for anyone who has a passion for gardening, or wishes to take better care of their plants. These individuals need an outlet to gain knowledge and engage in better plant habits to allow them to have the garden of their dreams. 
+                                </p>
+                                <p>
+                                    This project allowed me to vastly step outside my comfort zone and become familiar with both Apple Design Resources and Material Design. As using only iOS systems my entire life, this was exceptionally challenging but thoroughly exposed me to become just as familiar with Android systems also. I would say this project challenged me the most and showcases my design quality to the highest level.
+                                </p>
+                                <a href="seedly.html">Read More</a>
+                            </div><!-- end second column -->
+                        </div><!-- end row that holds (2) columns for project -->
+                    </div>
+                </div><!-- end work section (1) -->
+                
 
-            <div><!-- open work section (2) -->
-                <div><!-- open row that holds (2) columns for project -->
-                    <div><!-- open first column (used for image) -->
-                        <picture>
-                            <source srcset="img/cookly/cookly-portfolio-thumbnail@1x.jpg" media="(max-width:767px)">
-                            <img src="img/cookly/cookly-portfolio-thumbnail@2x.jpg" alt="Cookly Thumbnail Image">
-                        </picture>
-                    </div><!-- end first column -->
-                    <div><!-- open second column (used for text) -->
-                        <h3>Cookly</h3><!-- heading for the project -->
-                        <p><!-- open paragraph -->
-                            Cookly is a responsive web application that was designed for anyone with a passion for cooking. The app was designed to enhance the overall experience in the kitchen and allow aspirational home cooks to feel at ease knowing they have their very own chef assistant and friend.
-                        </p>
-                        <p>
-                            For this project, I thoroughly focused on user testing and catering to the needs of my participants. This project allowed me to lose my designer biasism and design through the lens of my users and focusing on their experience.
-                        </p>
-                        <a href="cookly.html">Read More</a>
-                    </div><!-- end second column -->
-                </div><!-- end row that holds (2) columns for project -->
-            </div><!-- end work section (2) -->
-            
-            <div><!-- open work section (3) -->
-                <div><!-- open row that holds (2) columns for project -->
-                    <div><!-- open first column (used for image) -->
-                        <picture>
-                            <source srcset="img/banq/banq-portfolio-thumbnail@1x.jpg" media="(max-width:767px)">
-                            <img src="img/banq/banq-portfolio-thumbnail@2x.jpg" alt="BANQ Thumbnail Image">
-                        </picture>
-                    </div><!-- end first column -->
-                    <div><!-- open second column (used for text) -->
-                        <h3>BANQ</h3><!-- heading for the project -->
-                        <p><!-- open paragraph -->
-                            A short description of project goes here.
-                        </p>
-                        <p>
-                            A short description of skills goes here.
-                        </p>
-                        <a href="banq.html">Read More</a>
-                    </div><!-- end second column -->
-                </div><!-- end row that holds (2) columns for project -->
-            </div><!-- end work section (2) -->
+                <div class="container"><!-- open work section (2) -->
+                    <div class="row">
+                        <div><!-- open row that holds (2) columns for project -->
+                            <div><!-- open first column (used for image) -->
+                                <picture>
+                                    <source srcset="img/cookly/cookly-portfolio-thumbnail@1x.jpg" media="(max-width:767px)">
+                                    <img src="img/cookly/cookly-portfolio-thumbnail@2x.jpg" alt="Cookly Thumbnail Image">
+                                </picture>
+                            </div><!-- end first column -->
+                            <div><!-- open second column (used for text) -->
+                                <h3>Cookly</h3><!-- heading for the project -->
+                                <p><!-- open paragraph -->
+                                    Cookly is a responsive web application that was designed for anyone with a passion for cooking. The app was designed to enhance the overall experience in the kitchen and allow aspirational home cooks to feel at ease knowing they have their very own chef assistant and friend.
+                                </p>
+                                <p>
+                                    For this project, I thoroughly focused on user testing and catering to the needs of my participants. This project allowed me to lose my designer biasism and design through the lens of my users and focusing on their experience.
+                                </p>
+                                <a href="cookly.html">Read More</a>
+                            </div><!-- end second column -->
+                        </div>
+                    </div><!-- end row that holds (2) columns for project -->
+                </div><!-- end work section (2) -->
+                    
+                <div class="container"><!-- open work section (3) -->
+                    <div class="row">
+                        <div><!-- open row that holds (2) columns for project -->
+                            <div><!-- open first column (used for image) -->
+                                <picture>
+                                    <source srcset="img/banq/banq-portfolio-thumbnail@1x.jpg" media="(max-width:767px)">
+                                    <img src="img/banq/banq-portfolio-thumbnail@2x.jpg" alt="BANQ Thumbnail Image">
+                                </picture>
+                            </div><!-- end first column -->
+                            <div><!-- open second column (used for text) -->
+                                <h3>BANQ</h3><!-- heading for the project -->
+                                <p><!-- open paragraph -->
+                                    A short description of project goes here.
+                                </p>
+                                <p>
+                                    A short description of skills goes here.
+                                </p>
+                                <a href="banq.html">Read More</a>
+                            </div><!-- end second column -->
+                        </div>    
+                    </div><!-- end row that holds (2) columns for project -->
+                </div><!-- end work section (2) -->
+            </div>
         </main>
 
         <footer id="contact">
-            <div>
-                <h2> Get in Touch </h2><!-- footers heading -->
-            </div>
-                <p>
-                    Do you like my work and would like to discuss opportunities? Please get in touch. Call: <a href="tel:#">phone number goes here</a>, I'd love to hear from you! </p> 
-                    <p>Prefer sending an email?
-                </p>
-                <div>
-                    <a 
-                    href="mailto:leoniealmeida@gmail.com?"
-                    class="button-contact">
-                    Send me an email!</a>
-                    <!-- button or link label for email-->
+            <div class="container">
+                <div class="row">
+                    <h2> Get in Touch </h2><!-- footers heading -->
+                    <p>
+                        Do you like my work and would like to discuss opportunities? Please get in touch. Call: <a href="tel:#">phone number goes here</a>, I'd love to hear from you! </p> 
+                        <p>Prefer sending an email?
+                    </p>
+                    <div>
+                        <a 
+                        href="mailto:leoniealmeida@gmail.com?"
+                        class="button-contact">
+                        Send me an email!</a>
+                        <!-- button or link label for email-->
+                    </div>
                 </div>
+
                 <div> 
                 <!--Social Media-->
                 <a href="https://www.linkedin.com/in/leonie-almeida-572a86231/" target="_blank">
