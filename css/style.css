@@ -135,6 +135,10 @@ img {
   text-align: center; /* Centers text */
 }
 
+#about h1 {
+  text-align: center; /* Centers text */
+}
+
 a:hover {
   color: #ffc752;
   text-decoration: underline; /* Underlining when hovering over a link */
