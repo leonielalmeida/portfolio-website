@@ -118,34 +118,42 @@ header {
   background-color: rgba(252, 251, 244);
   border-bottom: 3px solid #eeeeee;
   box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.6);
-  text-align: center;
   position: relative;
   padding: 10px 0;
   margin: 10px;
 }
 
 .logo {
-  max-width: 250px;
-  text-align: center;
+  max-width: 150px;
+  text-align: none;
 }
 
 nav > ul {
   list-style-type: none;
-  text-align: center;
   padding: 0;
-}
-
-nav > ul > li {
-  display: inline-block;
-  text-align: center;
 }
 
 nav > ul > li > a {
   padding: 0 15px;
   text-transform: uppercase;
-  text-align: center;
   font-weight: 700;
   color: #4a4a4a;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
 }
 
 img {
@@ -158,8 +166,22 @@ img {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
 
-#work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
+#work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; 
+}
 
+.social {
+  text-align: center;
+}
+
+.social a {
+  text-align: inline-block;
+  margin: @ 5px;
+}
+
+.social svg {
+  width: 50px;
+  height: auto;
+}
 
 /* ==============================
 Layout styling
@@ -271,12 +293,24 @@ Medium devices (640px and larger)
 @media only screen and (min-width: 640px) {
   [class*="col-"] {
     float: left;
-    padding: 10px
+    padding: 10px;
   }
 
   header {
     text-align: unset;
     padding: 20px 0 13px;
+  }
+
+  nav > ul {
+    margin: 1em 0;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
   }
 
   nav {
@@ -308,6 +342,9 @@ Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
 
+  .navtoggle li:last-child {
+    display: none;
+  }
   .container {
     max-width: 1200px;
     margin-left: auto;
@@ -332,4 +369,7 @@ Large devices (1024px or larger)
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
+  .navtoggle li:last-child {
+    display: none;
+  }
 }
