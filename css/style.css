@@ -53,7 +53,9 @@ a {
   text-decoration: none; /* No underlining */
 }
 
-/*General link*/
+/* ==============================
+General link
+================================= */
 a {
   color: #3168ff;
   text-decoration: none;
