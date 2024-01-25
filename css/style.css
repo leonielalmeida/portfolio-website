@@ -274,6 +274,12 @@ Page Specific
   text-align: center; /* Centers text */
 }
 
+.profile-picture {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ==============================
 Animations
 ================================= */
