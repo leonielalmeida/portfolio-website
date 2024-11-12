@@ -78,25 +78,27 @@ a:active {
 }
 
 .button {
-  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #8AA79E;
-  color: #fff; /* needed to override the default link color */
+  display: inline-block; /* Keeps it as an inline-block element */
+  background-color: #ffc752; /* Daffodil Yellow */
+  color: #757575; /* Default text color */
   font-weight: 400;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 20px; /* Added padding for better sizing */
   border-radius: 3px;
-  border-bottom: 2px solid #5f5f5f; /* width of the border, type, color */
   opacity: 1;
-  transition: all 0.2s opacity;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 }
 
 .button:hover {
-  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  opacity: 0.9; /* A subtle reduction in opacity for a hover effect */
+  background-color: #465fa4; /* Change background to Han Blue on hover */
+  color: #fff; /* Change text color to white */
   text-decoration: none;
 }
 
+
 .button.contact {
-  background-color: #8AA79E;
+  background-color: #ffc752;
   color: #ff7f50;
   text-transform: uppercase;
   border: 2px solid #ff7f50;
