@@ -80,7 +80,7 @@ a:active {
 .button {
   display: inline-block; /* Keeps it as an inline-block element */
   background-color: #ffc752; /* Daffodil Yellow */
-  color: #757575; /* Default text color */
+  color: #414141; /* Default text color */
   font-weight: 400;
   text-decoration: none;
   padding: 10px 20px; /* Added padding for better sizing */
@@ -293,6 +293,118 @@ Page Specific
   height: auto;   /* Maintain aspect ratio */
   display: block; /* Ensures it centers properly */
   margin: 0 auto; /* Centers image horizontally */
+}
+
+/* Basic Navigation Link Styling */
+header .main-nav a {
+  color: #333; /* Neutral, dark text color */
+  font-size: 1rem; /* Standard font size */
+  font-weight: 500; /* Slight emphasis */
+  padding: 10px 15px; /* Added padding for better spacing */
+  text-decoration: none; /* Remove underline */
+  position: relative; /* For custom underline effect */
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+/* Hover Effect */
+header .main-nav a:hover {
+  color: #ffc752; /* Subtle color change on hover */
+}
+
+header .main-nav a::after {
+  content: ''; /* Pseudo-element for underline */
+  position: absolute;
+  bottom: -4px; /* Position underline slightly below text */
+  left: 0;
+  right: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #ffc752; /* Yellow underline color */
+  transform: scaleX(0); /* Start with no underline */
+  transition: transform 0.3s ease; /* Smooth animation */
+  transform-origin: left; /* Animate from the left */
+}
+
+/* Hover Effect for Underline */
+header .main-nav a:hover::after {
+  transform: scaleX(1); /* Expand underline on hover */
+}
+
+/* Active link styling */
+header .main-nav a.active {
+  color: #ffc752; /* Highlight color */
+  font-weight: 600; /* Emphasize active link */
+}
+
+/* Footer Container */
+.footer-container {
+  background-color: #fcfbf4; /* Matches your website's theme */
+  padding: 5px 0; /* Adds spacing to the top and bottom */
+  text-align: center;
+}
+
+.footer-content h2 {
+  font-size: 2em; /* Larger font size for heading */
+  font-weight: 700;
+  color: #465fa4; /* Matches your primary color */
+  margin-bottom: 15px; /* Adds space below the heading */
+}
+
+.footer-content p {
+  font-size: 1.1em; /* Slightly larger text for readability */
+  color: #4a4a4a;
+  line-height: 1.5;
+  margin-bottom: 15px; /* Adds space below the paragraph */
+}
+
+.phone-link {
+  color: #465fa4;
+  font-weight: 600; /* Makes the phone number stand out */
+}
+
+.phone-link:hover {
+  color: #ffc752; /* Hover effect for phone link */
+  text-decoration: underline;
+}
+
+.email-button {
+  margin-top: 20px;
+  margin-bottom: 30px; /* Adds more space after the button */
+}
+
+.button.contact {
+  background-color: #ffc752; /* Daffodil yellow for button */
+  color: #465fa4; /* Primary color for text */
+  padding: 12px 30px; /* Makes the button more clickable */
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  border: none; /* No border */
+}
+
+.button.contact:hover {
+  background-color: #465fa4; /* Changes the button color on hover */
+  color: #fff; /* White text on hover */
+  transform: scale(1.05); /* Slightly grows the button for a subtle effect */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+  .footer-container {
+    padding: 20px 0; /* Reduces padding on smaller screens */
+  }
+
+  .footer-content h2 {
+    font-size: 1.75em; /* Slightly smaller heading on mobile */
+  }
+
+  .footer-content p {
+    font-size: 1em; /* Adjusts paragraph size */
+  }
+
+  .button.contact {
+    padding: 10px 25px; /* Smaller button on mobile */
+  }
 }
 
 /* ==============================
