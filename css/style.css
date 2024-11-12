@@ -287,20 +287,6 @@ Page Specific
   margin: 0 auto;
 }
 
-.about-content {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 20px;
-}
-
 /* Hero Section Image Styling */
 #hero picture img {
   max-width: 45%; /* Resize image to 45% */
