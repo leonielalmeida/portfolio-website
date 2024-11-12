@@ -285,6 +285,14 @@ Page Specific
   margin: 0 auto;
 }
 
+/* Hero Section Image Styling */
+#hero picture img {
+  max-width: 45%; /* Resize image to 45% */
+  height: auto;   /* Maintain aspect ratio */
+  display: block; /* Ensures it centers properly */
+  margin: 0 auto; /* Centers image horizontally */
+}
+
 /* ==============================
 Animations
 ================================= */
