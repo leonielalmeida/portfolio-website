@@ -438,7 +438,7 @@ Page Specific
 
 /* Hero Section Image Styling */
 #hero picture img {
-  max-width: 46%; /* Resize image to 45% */
+  max-width: 45%; /* Resize image to 45% */
   height: auto;   /* Maintain aspect ratio */
   display: block; /* Ensures it centers properly */
   margin: 0 auto; /* Centers image horizontally */
