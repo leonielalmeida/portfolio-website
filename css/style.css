@@ -213,6 +213,49 @@ img {
   height: auto;
 }
 
+/* Global Button Styling */
+button, .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff; /* Primary button color */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+button:hover, .btn:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+  transform: translateY(-2px);
+}
+
+/* Focus Effect */
+button:focus, .btn:focus {
+  outline: 2px solid #80bdff;
+  outline-offset: 2px;
+}
+
+/* Disabled Button */
+button:disabled, .btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Additional Responsive Tweaks */
+@media (max-width: 768px) {
+  button, .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+
 /* ==============================
 Layout styling
 ================================= */
@@ -320,6 +363,78 @@ Page Specific
   background-color: #0056b3;
 }
 
+/* Section Container */
+.skills-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Individual Sections */
+.skills, .tools {
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Headings */
+.skills h2, .tools h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Lists */
+.skills ul, .tools ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li, .tools li {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 10px 0;
+  position: relative;
+}
+
+/* Adding subtle icons/bullets */
+.skills li::before, .tools li::before {
+  content: "•"; /* Replace with a relevant icon if desired */
+  color: #007bff;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .skills-tools {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .skills, .tools {
+    max-width: 100%;
+  }
+}
+
+.skills li:hover, .tools li:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.skills, .tools {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 /* Hero Section Image Styling */
 #hero picture img {
