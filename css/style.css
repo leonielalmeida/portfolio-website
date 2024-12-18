@@ -78,28 +78,29 @@ a:active {
 }
 
 .button {
-  display: inline-block; /* Keeps it as an inline-block element */
-  background-color: #ffc752; /* Daffodil Yellow */
-  color: #414141; /* Default text color */
-  font-weight: 400;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff; /* Primary button color */
+  border: none;
+  border-radius: 5px;
   text-decoration: none;
-  padding: 10px 20px; /* Added padding for better sizing */
-  border-radius: 3px;
-  opacity: 1;
-  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
 .button:hover {
-  opacity: 0.9; /* A subtle reduction in opacity for a hover effect */
-  background-color: #465fa4; /* Change background to Han Blue on hover */
-  color: #fff; /* Change text color to white */
-  text-decoration: none;
+  background-color: #0056b3; /* Darker shade for hover */
+  transform: translateY(-2px);
 }
 
 
 .button.contact {
-  background-color: #ffc752;
-  color: #ff7f50;
+  background-color: #007bff;
+  color: #007bff;
   text-transform: uppercase;
   border: 2px solid #ff7f50;
 }
@@ -494,7 +495,7 @@ header .main-nav a.active {
 .footer-content h2 {
   font-size: 2em; /* Larger font size for heading */
   font-weight: 700;
-  color: #465fa4; /* Matches your primary color */
+  color: #007bff; /* Matches your primary color */
   margin-bottom: 15px; /* Adds space below the heading */
 }
 
@@ -521,8 +522,8 @@ header .main-nav a.active {
 }
 
 .button.contact {
-  background-color: #ffc752; /* Daffodil yellow for button */
-  color: #465fa4; /* Primary color for text */
+  background-color: #007bff; /* Daffodil yellow for button */
+  color: #fff; /* Primary color for text */
   padding: 12px 30px; /* Makes the button more clickable */
   text-transform: uppercase;
   font-weight: 600;
@@ -532,8 +533,8 @@ header .main-nav a.active {
 }
 
 .button.contact:hover {
-  background-color: #465fa4; /* Changes the button color on hover */
-  color: #fff; /* White text on hover */
+  background-color: #0056b3; /* Changes the button color on hover */
+  color: #ffc752; /* White text on hover */
   transform: scale(1.05); /* Slightly grows the button for a subtle effect */
 }
 
