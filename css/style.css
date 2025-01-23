@@ -49,6 +49,12 @@ h4 {
   font-weight: 400;
 }
 
+h6 {
+  line-height: 1.4;
+  font-size: 1em;
+  font-weight: 500;
+}
+
 a {
   color: #465fa4;
   text-decoration: none; /* No underlining */
