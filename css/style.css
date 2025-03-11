@@ -2,7 +2,7 @@
 Colors used:
 Background Color (Cream White): #fcfbf4;
 Primary Color (Han Blue): #465fa4 or rgb(70,103,164);
-Secondary Color (Sage Green): #5de4c2;
+Secondary Color (Sage Green): #7fd1bd;
 */
 
 /* ==============================
@@ -538,7 +538,7 @@ header .main-nav a.active {
 
 .button.contact:hover {
   background-color: #0056b3; /* Changes the button color on hover */
-  color: #5de4c2; /* White text on hover */
+  color: #7fd1bd; /* White text on hover */
   transform: scale(1.05); /* Slightly grows the button for a subtle effect */
 }
 
