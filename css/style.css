@@ -2,7 +2,7 @@
 Colors used:
 Background Color (Cream White): #fcfbf4;
 Primary Color (Han Blue): #465fa4 or rgb(70,103,164);
-Secondary Color (Daffodil Yellow): #ffc752;
+Secondary Color (Sage Green): #5de4c2;
 */
 
 /* ==============================
@@ -69,7 +69,7 @@ a {
 }
 
 a:hover {
-  color: #ffc752;
+  color: #81ebd0;
   text-decoration: underline; /* Underlining when hovering over a link */
 }
 
@@ -131,7 +131,7 @@ header {
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 100px;
   text-align: none;
 }
 
@@ -462,7 +462,7 @@ header .main-nav a {
 
 /* Hover Effect */
 header .main-nav a:hover {
-  color: #ffc752; /* Subtle color change on hover */
+  color: #5de4c2; /* Subtle color change on hover */
 }
 
 header .main-nav a::after {
@@ -472,7 +472,7 @@ header .main-nav a::after {
   left: 0;
   right: 0;
   height: 2px; /* Thickness of the underline */
-  background-color: #ffc752; /* Yellow underline color */
+  background-color: #5de4c2; /* Yellow underline color */
   transform: scaleX(0); /* Start with no underline */
   transition: transform 0.3s ease; /* Smooth animation */
   transform-origin: left; /* Animate from the left */
@@ -485,7 +485,7 @@ header .main-nav a:hover::after {
 
 /* Active link styling */
 header .main-nav a.active {
-  color: #ffc752; /* Highlight color */
+  color: #5de4c2; /* Highlight color */
   font-weight: 600; /* Emphasize active link */
 }
 
@@ -516,7 +516,7 @@ header .main-nav a.active {
 }
 
 .phone-link:hover {
-  color: #ffc752; /* Hover effect for phone link */
+  color: #5de4c2; /* Hover effect for phone link */
   text-decoration: underline;
 }
 
@@ -538,7 +538,7 @@ header .main-nav a.active {
 
 .button.contact:hover {
   background-color: #0056b3; /* Changes the button color on hover */
-  color: #ffc752; /* White text on hover */
+  color: #5de4c2; /* White text on hover */
   transform: scale(1.05); /* Slightly grows the button for a subtle effect */
 }
 
