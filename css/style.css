@@ -1,0 +1,780 @@
+/*
+Colors used:
+Background Color (Cream White): #fcfbf4;
+Primary Color (Han Blue): #465fa4 or rgb(70,103,164);
+Secondary Color (Sage Green): #7fd1bd;
+*/
+
+/* ==============================
+General Styles (Body)
+================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcfbf4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px; /* Sets the font size to 16px */
+  font-weight: 300; /* Sets the font weight to 300 */
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #4a4a4a;
+}
+
+/* ==============================
+Typography & Lists
+================================= */
+
+h1 {
+  line-height: 1.4;
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  line-height: 1.4;
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  line-height: 1.4;
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+h4 {
+  line-height: 1.4;
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+h6 {
+  line-height: 1.4;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+a {
+  color: #465fa4;
+  text-decoration: none; /* No underlining */
+}
+
+/* ==============================
+General link
+================================= */
+a {
+  color: #3168ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #65daa3;
+  text-decoration: underline; /* Underlining when hovering over a link */
+}
+
+a:focus {
+  color: #7f96d1;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #7f96d1;
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff; /* Primary button color */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+  transform: translateY(-2px);
+}
+
+
+.button.contact {
+  background-color: #007bff;
+  color: #007bff;
+  text-transform: uppercase;
+  border: 2px solid #ff7f50;
+}
+
+.button.contact:hover {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+/* ==============================
+Global Elements
+================================= */
+header {
+  background-color: rgba(252, 251, 244);
+  position: relative;
+  padding: 10px 0 4px;
+  margin: 10px;
+}
+
+.logo {
+  max-width: 100px;
+  text-align: none;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle {
+  position: relative;
+}
+
+.navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+
+.navtoggle.responsive li {
+  display: block;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 127, 80, 0.5);
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+}
+
+main {
+  padding-top: 56px;
+}
+
+picture img {
+  width: 100%;
+  max-width: 700px; /* Makes images more dominant */
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px; /* Adds smooth edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle depth */
+}
+
+.row {
+  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: none; /* Removes the lines */
+}
+
+.social {
+  text-align: center;
+}
+
+.social a {
+  text-align: inline-block;
+  margin: 5px;
+}
+
+.social svg {
+  width: 50px;
+  height: auto;
+}
+
+/* Fix image width for case study pages */
+.case-study img {
+  width: 100%;
+  max-width: 1000px; /* Adjust this to match your text width */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Global Button Styling */
+button, .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff; /* Primary button color */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+button:hover, .btn:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+  transform: translateY(-2px);
+}
+
+/* Focus Effect */
+button:focus, .btn:focus {
+  outline: 2px solid #80bdff;
+  outline-offset: 2px;
+}
+
+/* Disabled Button */
+button:disabled, .btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Additional Responsive Tweaks */
+@media (max-width: 768px) {
+button, .btn {
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+}
+
+/* ==============================
+Layout styling
+================================= */
+.container {
+  width: 95%; /* Make content use more screen space */
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 3%; /* Reduce padding so margins aren’t too big */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Keep 2 columns on larger screens */
+  gap: 60px;
+  align-items: center;
+  margin: 80px 0;
+}
+
+@media (max-width: 768px) {
+.row {
+  display: flex; /* Switch to flexbox */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 30px; /* Less space between items */
+  align-items: center; /* Center-align content */
+  text-align: center; /* Ensure text is centered */
+}
+
+.row img {
+  max-width: 90%; /* Prevent images from being too large */
+  height: auto; /* Keep aspect ratio */
+}
+}
+
+[class*="col-"] {
+  flex: 1; /* Allows automatic resizing */
+  min-width: 300px; /* Prevents columns from being too small */
+}
+
+/* ==============================
+Components
+================================= */
+
+/* ==============================
+Page Specific
+================================= */
+#hero h1 {
+  text-align: center; /* Centers text */
+}
+
+#hero h2 {
+  text-align: center; /* Centers text */
+}
+
+#hero p {
+  text-align: center; /* Centers text */
+}
+
+#hero span {
+  display: block;
+}
+
+#hero {
+  background-color: rgba(252, 251, 244);
+}
+
+#hero {
+  background-color: rgba(252, 251, 244);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  text-align: center;
+  padding: 20px;
+}
+
+#about h1 {
+  text-align: center; /* Centers text */
+}
+
+.profile-picture {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-container {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-container h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.about-container p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+.about-container a.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.about-container a.cta:hover {
+  background-color: #0056b3;
+}
+
+/* Section Container */
+.skills-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Individual Sections */
+.skills, .tools {
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Headings */
+.skills h2, .tools h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Lists */
+.skills ul, .tools ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li, .tools li {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 10px 0;
+  position: relative;
+}
+
+/* Adding subtle icons/bullets */
+.skills li::before, .tools li::before {
+  content: "•"; /* Replace with a relevant icon if desired */
+  color: #007bff;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .skills-tools {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .skills, .tools {
+    max-width: 100%;
+  }
+}
+
+.skills li:hover, .tools li:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.skills, .tools {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section Image Styling */
+#hero picture img {
+  max-width: 50%; /* Make image take more space */
+  height: auto;   /* Maintain aspect ratio */
+  display: block; /* Ensures it centers properly */
+  margin: 0 auto; /* Centers image horizontally */
+}
+
+/* Basic Navigation Link Styling */
+header .main-nav a {
+  color: #333; /* Neutral, dark text color */
+  font-size: 1rem; /* Standard font size */
+  font-weight: 500; /* Slight emphasis */
+  padding: 10px 15px; /* Added padding for better spacing */
+  text-decoration: none; /* Remove underline */
+  position: relative; /* For custom underline effect */
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+/* Hover Effect */
+header .main-nav a:hover {
+  color: #5de4c2; /* Subtle color change on hover */
+}
+
+header .main-nav a::after {
+  content: ''; /* Pseudo-element for underline */
+  position: absolute;
+  bottom: -4px; /* Position underline slightly below text */
+  left: 0;
+  right: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #5de4c2; /* Yellow underline color */
+  transform: scaleX(0); /* Start with no underline */
+  transition: transform 0.3s ease; /* Smooth animation */
+  transform-origin: left; /* Animate from the left */
+}
+
+/* Hover Effect for Underline */
+header .main-nav a:hover::after {
+  transform: scaleX(1); /* Expand underline on hover */
+}
+
+/* Active link styling */
+header .main-nav a.active {
+  color: #5de4c2; /* Highlight color */
+  font-weight: 600; /* Emphasize active link */
+}
+
+/* Footer Container */
+.footer-container {
+  background-color: #fcfbf4; /* Matches your website's theme */
+  padding: 5px 0; /* Adds spacing to the top and bottom */
+  text-align: center;
+}
+
+.footer-content h2 {
+  font-size: 2em; /* Larger font size for heading */
+  font-weight: 700;
+  color: #007bff; /* Matches your primary color */
+  margin-bottom: 15px; /* Adds space below the heading */
+}
+
+.footer-content p {
+  font-size: 1.1em; /* Slightly larger text for readability */
+  color: #4a4a4a;
+  line-height: 1.5;
+  margin-bottom: 15px; /* Adds space below the paragraph */
+}
+
+.phone-link {
+  color: #465fa4;
+  font-weight: 600; /* Makes the phone number stand out */
+}
+
+.phone-link:hover {
+  color: #5de4c2; /* Hover effect for phone link */
+  text-decoration: underline;
+}
+
+.email-button {
+  margin-top: 20px;
+  margin-bottom: 30px; /* Adds more space after the button */
+}
+
+.button.contact {
+  background-color: #007bff; /* Daffodil yellow for button */
+  color: #fff; /* Primary color for text */
+  padding: 12px 30px; /* Makes the button more clickable */
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  border: none; /* No border */
+}
+
+.button.contact:hover {
+  background-color: #007bff; /* Changes the button color on hover */
+  color: #5de4c2; /* White text on hover */
+  transform: scale(1.05); /* Slightly grows the button for a subtle effect */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+.footer-container {
+  padding: 20px 0; /* Reduces padding on smaller screens */
+}
+
+.footer-content h2 {
+  font-size: 1.75em; /* Slightly smaller heading on mobile */
+}
+
+.footer-content p {
+  font-size: 1em; /* Adjusts paragraph size */
+}
+
+.button.contact {
+  padding: 10px 25px; /* Smaller button on mobile */
+}
+}
+
+/* ==============================
+Animations
+================================= */
+@keyframes color-change {
+  0% { fill: #edc655; }
+  50% { fill: #fcffad; }
+  100% { fill: #f76414; }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from { transform: translate(0, 50px); }
+  to { transform: translate(200px, 50px); }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from { transform: translate(446px, 48px); }
+  to { transform: translate(100px, 48px); }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* ==============================
+Media Queries
+================================= */
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  [class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+header {
+  text-align: unset;
+  padding: 20px 0 13px;
+}
+
+nav > ul {
+  margin: 1em 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+
+.navtoggle.responsive nav {
+  padding: 0;
+}
+
+.navtoggle.responsive li {
+  padding: 0;
+  border-top: 0;
+}
+
+.navtoggle li:last-child {
+  display: none;
+}
+
+nav {
+  width: auto;
+  float: right;
+  margin-top: 4px;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.col-md-1 { width: 8.33%; }
+.col-md-2 { width: 16.66%; }
+.col-md-3 { width: 25%; }
+.col-md-4 { width: 33.33%; }
+.col-md-5 { width: 41.66%; }
+.col-md-6 { width: 50%; }
+.col-md-7 { width: 58.33%; }
+.col-md-8 { width: 66.66%; }
+.col-md-9 { width: 75%; }
+.col-md-10 { width: 83.33%; }
+.col-md-11 { width: 91.66%; }
+.col-md-12 { width: 100%; }
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+.container {
+  width: 90%;
+  max-width: 1600px; /* Expand to a larger max width */
+  margin: 0 auto;
+}
+
+.col-lg-1 { width: 8.33%; }
+.col-lg-2 { width: 16.66%; }
+.col-lg-3 { width: 25%; }
+.col-lg-4 { width: 33.33%; }
+.col-md-6, .col-lg-7, .col-lg-5 {
+  width: 100%; /* Let these sections take full available width */
+  max-width: none; /* Removes restriction */
+.col-lg-8 { width: 66.66%; }
+.col-lg-9 { width: 75%; }
+.col-lg-10 { width: 83.33%; }
+.col-lg-11 { width: 91.66%; }
+.col-lg-12 { width: 100%; }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+.navtoggle li:last-child {
+  display: none;
+}
+}
+
+/* ==============================
+Mobile Layout Fixes 
+================================= */
+
+@media (max-width: 480px) {
+h1 {
+  font-size: 2em; /* Reduce text size on small screens */
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+p {
+  font-size: 1rem; /* Make paragraphs more readable */
+  line-height: 1.5;
+  max-width: 90%; /* Prevents text from stretching */
+  margin: 0 auto;
+}
+}
+
+/* ==============================
+Case Study Image & Layout Fixes
+================================= */
+
+/* Ensures all case study content stays within the same width */
+.case-study-container {
+  width: 90%;
+  max-width: 1000px; /* Matches text and image width */
+  margin: 0 auto; /* Centers content */
+}
+
+/* Ensures images align with text */
+.case-study-img {
+  width: 100%;
+  max-width: 1000px; /* Matches text width */
+  margin: 0 auto;
+}
+
+.case-study-img img {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  display: block;
+  border-radius: 10px; /* Optional rounded edges */
+}
+
+/* Ensures text aligns properly with images */
+.case-study-text {
+  max-width: 1000px; /* Matches image width */
+  margin: 0 auto;
+  text-align: left; /* Keeps left-aligned on larger screens */
+  padding-top: 20px;
+}
+
+/* Adjust layout for mobile responsiveness */
+@media (max-width: 768px) {
+  .case-study-container {
+    width: 95%; /* Uses more screen space */
+  }
+
+  .case-study-text {
+    text-align: center; /* Centers text for better readability */
+  }
+}
