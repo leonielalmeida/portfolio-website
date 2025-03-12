@@ -275,10 +275,25 @@ Layout styling
 
 .row {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Makes a 2-column layout */
-  gap: 60px; /* Adds breathing room between projects */
+  grid-template-columns: 1fr 1fr; /* Keep 2 columns on larger screens */
+  gap: 60px;
   align-items: center;
   margin: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .row {
+    display: flex; /* Switch to flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 30px; /* Less space between items */
+    align-items: center; /* Center-align content */
+    text-align: center; /* Ensure text is centered */
+  }
+
+  .row img {
+    max-width: 90%; /* Prevent images from being too large */
+    height: auto; /* Keep aspect ratio */
+  }
 }
 
 [class*="col-"] {
@@ -315,9 +330,12 @@ Page Specific
 
 #hero {
   background-color: rgba(252, 251, 244);
-  padding: 20px 0;
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  text-align: center;
+  padding: 20px;
 }
 
 #about h1 {
@@ -684,5 +702,26 @@ X-large devices (1440px or larger)
 @media only screen and (min-width: 1440px) {
   .navtoggle li:last-child {
     display: none;
+  }
+}
+
+/* ==============================
+Mobile Layout Fixes 
+================================= */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em; /* Reduce text size on small screens */
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  p {
+    font-size: 1rem; /* Make paragraphs more readable */
+    line-height: 1.5;
+    max-width: 90%; /* Prevents text from stretching */
+    margin: 0 auto;
   }
 }
