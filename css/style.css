@@ -69,7 +69,7 @@ a {
 }
 
 a:hover {
-  color: #81ebd0;
+  color: #65daa3;
   text-decoration: underline; /* Underlining when hovering over a link */
 }
 
@@ -204,7 +204,7 @@ picture img {
 
 #work .row {
   padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
+  border-bottom: none; /* Removes the lines */
 }
 
 .social {
@@ -532,8 +532,8 @@ header .main-nav a.active {
 }
 
 .button.contact:hover {
-  background-color: #0056b3; /* Changes the button color on hover */
-  color: #7fd1bd; /* White text on hover */
+  background-color: #007bff; /* Changes the button color on hover */
+  color: #5de4c2; /* White text on hover */
   transform: scale(1.05); /* Slightly grows the button for a subtle effect */
 }
 
