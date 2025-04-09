@@ -104,31 +104,19 @@ a:active {
 }
 
 /* Only the Seedly button gets these colors */
-.seedly-btn {
+a.btn.seedly-btn {
   background-color: #CC806F;
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.seedly-btn:hover {
-  background-color: #D79B8E;
+a.btn.seedly-btn:hover {
+  background-color: #bd6e5f;
   color: white;
   transform: translateY(-2px);
 }
 
 /* Only the BANQ button gets these colors */
-.banq-btn {
-  background-color: #6364FF;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.banq-btn:hover {
-  background-color: #6364FF;
-  color: white;
-  transform: translateY(-2px);
-}
-
 a.btn.banq-btn {
   background-color: #6364FF;
   color: white;
@@ -141,6 +129,18 @@ a.btn.banq-btn:hover {
   transform: translateY(-2px);
 }
 
+/* Only the Cookly button gets these colors */
+a.btn.cookly-btn {
+  background-color: #FC748D;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a.btn.cookly-btn:hover {
+  background-color: #e05a73;
+  color: white;
+  transform: translateY(-2px);
+}
 
 .button.contact {
   background-color: #007bff;
@@ -815,22 +815,4 @@ Case Study Image & Layout Fixes
   .case-study-text {
     text-align: center; /* Centers text for better readability */
   }
-}
-
-.btn {
-  background-color: #CC806F; /* Or any background color you prefer */
-  color: white;              /* <-- This sets the text color properly */
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: inline-block;
-  margin-top: 10px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.btn:hover {
-  background-color: #D79B8E;
-  transform: translateY(-2px);
-  color: white;  /* Make sure it stays white on hover too */
 }
