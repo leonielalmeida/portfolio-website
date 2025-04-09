@@ -116,6 +116,31 @@ a:active {
   transform: translateY(-2px);
 }
 
+/* Only the BANQ button gets these colors */
+.banq-btn {
+  background-color: #6364FF;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banq-btn:hover {
+  background-color: #6364FF;
+  color: white;
+  transform: translateY(-2px);
+}
+
+a.btn.banq-btn {
+  background-color: #6364FF;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a.btn.banq-btn:hover {
+  background-color: #4f50e3;
+  color: white;
+  transform: translateY(-2px);
+}
+
 
 .button.contact {
   background-color: #007bff;
