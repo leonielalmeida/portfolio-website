@@ -816,3 +816,16 @@ Case Study Image & Layout Fixes
     text-align: center; /* Centers text for better readability */
   }
 }
+
+/* Javascript */
+.hidden {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform, opacity;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
