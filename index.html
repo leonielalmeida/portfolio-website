@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/866b8d57fd.js" crossorigin="anonymous"></script>
 </head>
 
@@ -38,19 +39,19 @@
     </header>
 
     <main>
-        <div id="hero"><!-- open hero section -->
-            <div class="container">
-                <picture class="hidden" style="transition-delay: 0.1s;">
-                    <source srcset="img/ui-designer-illustration@1x.jpg" media="(max-width:767px)">
-                    <img src="img/ui-designer-illustration@2x.jpg" alt="UI Designer Thumbnail Image">
-                </picture>
-                <h1 class="hidden" style="transition-delay: 0.2s;">Hi, I'm Leonie Almeida!<br></h1>
-                <h2 class="hidden" style="transition-delay: 0.4s;">I'm a UI/UX Designer based in Houston, TX.</h2>
-                <h6 class="hidden" style="transition-delay: 0.6s;">My passion is curating visually pleasing designs while blending aesthetics with psychological insights to create efficient, user-centered experiences!</h6>
+        <section class="hero">
+            <div class="container hero-flex">
+                <div class="hero-image">
+                    <img src="img/artwork-illustration.png" alt="Leonie Line Art Illustration">
+                </div>
+                <div class="hero-text">
+                    <h1>Hi, I'm Leonie.</h1>
+                    <p class="subtitle">I'm a UI/UX Designer blending visual clarity with psychological and neuroscience principles to craft thoughtful digital experiences.</p>
+                </div>
             </div>
-        </div><!-- end hero section -->
+        </section>        
 
-        <div id="work">
+        <section id="work">
             <div class="container"><!-- open work section (1) -->
                 <h2 class="hidden" style="transition-delay: 0.1s;">My Work</h2>
                 <div class="row hidden" style="transition-delay: 0.3s;"><!-- open row that holds (2) columns for project -->
@@ -119,7 +120,7 @@
                     </div><!-- end second column -->
                 </div><!-- end row that holds (2) columns for project -->
             </div><!-- end work container -->
-        </div><!-- end work section -->
+        </section><!-- end work section -->
         <script src="js/interactive.js" defer></script>
     </main>
 

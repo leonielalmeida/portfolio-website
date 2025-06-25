@@ -164,8 +164,8 @@ Global Elements
 header {
   background-color: rgba(252, 251, 244);
   position: relative;
-  padding: 10px 0 4px;
-  margin: 10px;
+  padding: 0.5rem 0;
+  margin: 0px;
 }
 
 .logo {
@@ -224,7 +224,7 @@ nav > ul > li > a {
 }
 
 main {
-  padding-top: 56px;
+  padding-top: 0;
 }
 
 picture img {
@@ -354,77 +354,160 @@ Components
 /* ==============================
 Page Specific
 ================================= */
-#hero h1 {
-  text-align: center; /* Centers text */
-}
-
-#hero h2 {
-  text-align: center; /* Centers text */
-}
-
-#hero p {
-  text-align: center; /* Centers text */
-}
-
-#hero span {
-  display: block;
-}
-
-#hero {
-  background-color: rgba(252, 251, 244);
-}
-
-#hero {
-  background-color: rgba(252, 251, 244);
+.hero {
+  background-color: #fcfbf4;
+  padding: 0rem 0 2rem;; /* much tighter spacing */
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers content horizontally */
-  justify-content: center; /* Centers content vertically */
-  text-align: center;
-  padding: 20px;
+  justify-content: center;
 }
 
-#about h1 {
-  text-align: center; /* Centers text */
+.hero-content {
+  padding: 0; /* remove extra spacing */
+  max-width: unset;
 }
 
-.profile-picture {
-  max-width: 200px;
-  display: block;
+.location-time {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.location-time span {
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: 3.25rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: #2d2d2d;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 600px;
   margin: 0 auto;
+  font-weight: 300;
+}
+
+.current-status {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    padding: 4rem 1.5rem;
+  }
+}
+
+/* Updated About Section Styling */
+
+section.about {
+  background-color: #fcfbf4;
+  padding: 5rem 2rem;
 }
 
 .about-container {
-  text-align: center;
-  max-width: 700px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: flex-start;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px;
+  gap: 3rem;
 }
 
-.about-container h1 {
-  font-size: 2rem;
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-text h1::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.profile-picture img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid #007bff;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
   color: #333;
+  margin-bottom: 1rem;
 }
 
-.about-container p {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1.8;
-}
-
-.about-container a.cta {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  color: #fff;
+.about-text h1::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
   background-color: #007bff;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+  margin: 1rem 0;
+  border-radius: 4px;
 }
 
-.about-container a.cta:hover {
+.about-text p {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+
+.about-text a {
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.about-text a:hover {
+  text-decoration: underline;
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+}
+
+.cta-buttons .button {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-buttons .button:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 /* Section Container */
@@ -820,12 +903,84 @@ Case Study Image & Layout Fixes
 /* Javascript */
 .hidden {
   opacity: 0;
-  transform: translateY(60px) scale(0.95);
-  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
-  will-change: transform, opacity;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
 }
 
 .fade-in {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
+}
+
+/* Adjust Hero */
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem; /* Optional: tighter horizontal spacing */
+}
+
+.hero-text {
+  flex: 1 1 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-image {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text h1 {
+  font-size: 3.25rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: #2d2d2d;
+  margin: 0 0 0.75rem 0;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #555;
+  font-weight: 300;
+  max-width: unset;   /* override any unwanted max-width */
+  margin: 0;          /* prevent centering indent */
+}
+
+/* Responsive stacking for mobile */
+@media (max-width: 768px) {
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-image img {
+    max-width: 250px;
+  }
+}
+
+/* Adjust spacing below hero */
+#work {
+  margin-top: 5rem; /* feel free to fine-tune this */
 }
