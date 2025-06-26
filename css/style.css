@@ -735,127 +735,6 @@ Animations
 }
 
 /* ==============================
-Media Queries
-================================= */
-
-/* ==============================
-Medium devices (640px and larger)
-================================= */
-@media only screen and (min-width: 640px) {
-  [class*="col-"] {
-  float: left;
-  padding: 10px;
-}
-
-header {
-  text-align: unset;
-  padding: 20px 0 13px;
-}
-
-nav > ul {
-  margin: 1em 0;
-}
-
-nav > ul > li {
-  display: inline-block;
-}
-
-.navtoggle li:not(:last-child) {
-  display: inline-block;
-}
-
-.navtoggle.responsive nav {
-  padding: 0;
-}
-
-.navtoggle.responsive li {
-  padding: 0;
-  border-top: 0;
-}
-
-.navtoggle li:last-child {
-  display: none;
-}
-
-nav {
-  width: auto;
-  float: right;
-  margin-top: 4px;
-}
-
-.col-md-6 {
-  width: 50%;
-}
-
-.col-md-1 { width: 8.33%; }
-.col-md-2 { width: 16.66%; }
-.col-md-3 { width: 25%; }
-.col-md-4 { width: 33.33%; }
-.col-md-5 { width: 41.66%; }
-.col-md-6 { width: 50%; }
-.col-md-7 { width: 58.33%; }
-.col-md-8 { width: 66.66%; }
-.col-md-9 { width: 75%; }
-.col-md-10 { width: 83.33%; }
-.col-md-11 { width: 91.66%; }
-.col-md-12 { width: 100%; }
-}
-
-/* ==============================
-Large devices (1024px or larger)
-================================= */
-@media only screen and (min-width: 1024px) {
-.container {
-  width: 90%;
-  max-width: 1600px; /* Expand to a larger max width */
-  margin: 0 auto;
-}
-
-.col-lg-1 { width: 8.33%; }
-.col-lg-2 { width: 16.66%; }
-.col-lg-3 { width: 25%; }
-.col-lg-4 { width: 33.33%; }
-.col-md-6, .col-lg-7, .col-lg-5 {
-  width: 100%; /* Let these sections take full available width */
-  max-width: none; /* Removes restriction */
-.col-lg-8 { width: 66.66%; }
-.col-lg-9 { width: 75%; }
-.col-lg-10 { width: 83.33%; }
-.col-lg-11 { width: 91.66%; }
-.col-lg-12 { width: 100%; }
-}
-
-/* ==============================
-X-large devices (1440px or larger)
-================================= */
-@media only screen and (min-width: 1440px) {
-.navtoggle li:last-child {
-  display: none;
-}
-}
-
-/* ==============================
-Mobile Layout Fixes 
-================================= */
-
-@media (max-width: 480px) {
-h1 {
-  font-size: 2em; /* Reduce text size on small screens */
-}
-
-h2 {
-  font-size: 1.75em;
-}
-
-p {
-  font-size: 1rem; /* Make paragraphs more readable */
-  line-height: 1.5;
-  max-width: 90%; /* Prevents text from stretching */
-  margin: 0 auto;
-}
-}
-
-/* ==============================
 Case Study Image & Layout Fixes
 ================================= */
 
@@ -918,7 +797,7 @@ Case Study Image & Layout Fixes
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 2em;
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
@@ -931,20 +810,24 @@ Case Study Image & Layout Fixes
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-top: -4rem; /* Increased upward shift */
 }
 
 .hero-image {
   flex: 1 1 0;
   display: flex;
-  justify-content: center;
+  margin-left: 6rem;
+  margin-top: -3rem;   /* ⬆️ Pull it upward */
+  max-width: 550px;
 }
 
 .hero-image img {
-  max-width: 500px;
+  max-width: 100%;
   width: 100%;
   height: auto;
   display: block;
 }
+
 
 .hero-text h1 {
   font-size: 3.25rem;
@@ -959,14 +842,14 @@ Case Study Image & Layout Fixes
   font-size: 1.15rem;
   color: #555;
   font-weight: 300;
-  max-width: unset;   /* override any unwanted max-width */
-  margin: 0;          /* prevent centering indent */
+  max-width: 800px;   /* 🔧 Set a max width */
+  margin: 0;          /* Remove default spacing */
 }
 
 .butterfly {
   position: absolute;
-  top: 300px;
-  left: 450px;
+  top: 265px;
+  left: 385px;
   width: 80px;
   animation: flutter 5s ease-in-out infinite;
   pointer-events: none;
@@ -988,8 +871,139 @@ Case Study Image & Layout Fixes
   }
 }
 
-/* Responsive stacking for mobile */
-@media (max-width: 768px) {
+/* ==============================
+Media Queries
+================================= */
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav > ul {
+    margin: 1em 0;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle.responsive nav {
+    padding: 0;
+  }
+
+  .navtoggle.responsive li {
+    padding: 0;
+    border-top: 0;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  .col-md-1 { width: 8.33%; }
+  .col-md-2 { width: 16.66%; }
+  .col-md-3 { width: 25%; }
+  .col-md-4 { width: 33.33%; }
+  .col-md-5 { width: 41.66%; }
+  .col-md-6 { width: 50%; }
+  .col-md-7 { width: 58.33%; }
+  .col-md-8 { width: 66.66%; }
+  .col-md-9 { width: 75%; }
+  .col-md-10 { width: 83.33%; }
+  .col-md-11 { width: 91.66%; }
+  .col-md-12 { width: 100%; }
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 90%;
+    max-width: 1600px; /* Expand to a larger max width */
+    margin: 0 auto;
+  }
+
+  .col-lg-1 { width: 8.33%; }
+  .col-lg-2 { width: 16.66%; }
+  .col-lg-3 { width: 25%; }
+  .col-lg-4 { width: 33.33%; }
+  .col-md-6,
+  .col-lg-5,
+  .col-lg-7 {
+    width: 100%; /* Let these sections take full available width */
+    max-width: none;
+  }
+  .col-lg-8 { width: 66.66%; }
+  .col-lg-9 { width: 75%; }
+  .col-lg-10 { width: 83.33%; }
+  .col-lg-11 { width: 91.66%; }
+  .col-lg-12 { width: 100%; }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+  .navtoggle li:last-child {
+    display: none;
+  }
+}
+
+/* ==============================
+Mobile Layout Fixes 
+================================= */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-image img {
+    width: auto;
+    max-width: 180px;
+  }
+
+  .butterfly {
+    top: 180px;
+    width: 40px;
+  }
+}
+
+/* ==============================
+Tablet (<= 768px) Hero Stacking
+================================= */
+@media only screen and (max-width: 768px) {
   .hero-flex {
     flex-direction: column;
     text-align: center;
@@ -1002,6 +1016,13 @@ Case Study Image & Layout Fixes
 
   .hero-image img {
     max-width: 250px;
+  }
+
+  .butterfly {
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
   }
 }
 
