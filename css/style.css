@@ -794,6 +794,7 @@ Case Study Image & Layout Fixes
 
 /* Adjust Hero */
 .hero-flex {
+  position: relative; /* Add this */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -801,7 +802,7 @@ Case Study Image & Layout Fixes
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 2rem; /* Optional: tighter horizontal spacing */
+  padding: 0 2rem;
 }
 
 .hero-text {
@@ -848,9 +849,9 @@ Case Study Image & Layout Fixes
 
 .butterfly {
   position: absolute;
-  top: 265px;
-  left: 385px;
-  width: 80px;
+  top: 15%;     /* ← Adjust this visually */
+  left: 14%;    /* ← Adjust based on where you want it */
+  width: 90px;
   animation: flutter 5s ease-in-out infinite;
   pointer-events: none;
   z-index: 2;
@@ -971,7 +972,7 @@ X-large devices (1440px or larger)
 }
 
 /* ==============================
-Mobile Layout Fixes 
+Mobile Layout Fixes (<= 480px)
 ================================= */
 @media only screen and (max-width: 480px) {
   h1 {
@@ -989,19 +990,38 @@ Mobile Layout Fixes
     margin: 0 auto;
   }
 
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    align-items: center;
+    margin-top: -2rem;
+  }
+
+  .hero-image {
+    margin-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
+
   .hero-image img {
     width: auto;
     max-width: 180px;
   }
 
   .butterfly {
-    top: 180px;
-    width: 40px;
+    top: 14%;
+    left: 50%;
+    width: 38px;
+    transform: translateX(-50%);
   }
 }
 
 /* ==============================
-Tablet (<= 768px) Hero Stacking
+Tablet Layout (<= 768px)
 ================================= */
 @media only screen and (max-width: 768px) {
   .hero-flex {
@@ -1012,21 +1032,24 @@ Tablet (<= 768px) Hero Stacking
   .hero-text {
     text-align: center;
     align-items: center;
+    margin-top: -3rem;
+  }
+
+  .hero-image {
+    margin-left: 0;
+    padding-right: 0;
+    justify-content: center;
   }
 
   .hero-image img {
+    width: auto;
     max-width: 250px;
   }
 
   .butterfly {
-    top: 220px;
+    top: 16%;
     left: 50%;
-    transform: translateX(-50%);
     width: 50px;
+    transform: translateX(-50%);
   }
-}
-
-/* Adjust spacing below hero */
-#work {
-  margin-top: 5rem; /* feel free to fine-tune this */
 }
