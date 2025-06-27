@@ -53,75 +53,46 @@
         </section>        
 
         <section id="work">
-            <div class="container"><!-- open work section (1) -->
+            <div class="container">
                 <h2 class="hidden" style="transition-delay: 0.1s;">My Work</h2>
-                <div class="row hidden" style="transition-delay: 0.3s;"><!-- open row that holds (2) columns for project -->
-                    <div class="column col-md-6 col-lg-7"><!-- open first column (used for image) -->
-                        <picture>
-                            <source srcset="img/seedly/seedly-landing-page-thumbnail@1x.jpg" media="(max-width:767px)">
-                            <img src="img/seedly/seedly-landing-page-thumbnail@2x.jpg" alt="Seedly Thumbnail Image">
-                        </picture>
-                    </div><!-- end first column -->
-                    <div class="column col-md-6 col-lg-5"><!-- open second column (used for text) -->
-                        <h3>Seedly | Plant Care and eCommerce App</h3><!-- heading for the project -->
-                        <p><!-- open paragraph -->
-                            Seedly is a native mobile app for iOS and Android that helps gardening enthusiasts nurture healthier plants 
-                            through expert guidance, practical tips, and a seamless eCommerce experience. Users can not only access plant 
-                            care resources but also shop for gardening tools, seeds, and essentials—all within the app.
-                        </p>
-                        <p>
-                            This project challenged me to design across both Apple and Material Design systems, expanding my expertise beyond iOS. 
-                            By blending plant care with eCommerce, Seedly showcases my adaptability and commitment to intuitive, high-quality design.
-                        </p>
-                        <a href="seedly.html" class="button">Read More</a>
-                    </div><!-- end second column -->
-                </div><!-- end row that holds (2) columns for project -->
 
-                <div class="row hidden" style="transition-delay: 0.5s;"><!-- open row that holds (2) columns for project -->
-                    <div class="column col-md-6 col-lg-7"><!-- open first column (used for image) -->
-                        <picture>
-                            <source srcset="img/banq/banq-landing-page-thumbnail@1x.jpg" media="(max-width:767px)">
-                            <img src="img/banq/banq-landing-page-thumbnail@2x.jpg" alt="BANQ Thumbnail Image">
-                        </picture>
-                    </div><!-- end first column -->
-                    <div class="column col-md-6 col-lg-5"><!-- open second column (used for text) -->
-                        <h3>BANQ | Personal  Finance App</h3><!-- heading for the project -->
-                        <p><!-- open paragraph -->
-                            BANQ is a responsive web app designed to help users save money effortlessly through a seamless, intuitive 
-                            interface. Focused on trust, simplicity, and personalization, BANQ adapts to individual financial journeys.
-                        </p>
-                        <p>
-                            I integrated AI to provide tailored recommendations and real-time insights, optimizing saving habits through 
-                            a user-centric, research-driven approach. By merging cutting-edge AI with intuitive design, BANQ makes finance 
-                            management accessible, engaging, and effective—empowering users to take control of their savings with ease.
-                        </p>
-                        <a href="banq.html" class="button">Read More</a>
-                    </div><!-- end second column -->
-                </div><!-- end row that holds (2) columns for project -->
-
-                <div class="row hidden" style="transition-delay: 0.7s;"><!-- open row that holds (2) columns for project -->
-                    <div class="column col-md-6 col-lg-7"><!-- open first column (used for image) -->
-                        <picture>
-                            <source srcset="img/cookly/cookly-landing-page-thumbnail@1x.jpg" media="(max-width:767px)">
-                            <img src="img/cookly/cookly-landing-page-thumbnail@2x.jpg" alt="Cookly Thumbnail Image">
-                        </picture>
+                <!-- Seedly Card -->
+                <div class="case-study-card seedly-card hidden" style="transition-delay: 0.2s;">
+                    <div class="card-image">
+                        <img src="img/seedly/seedly-landing-page-thumbnail@2x.jpg" alt="Seedly App Mockup">
                     </div>
-                    <div class="column col-md-6 col-lg-5"><!-- open second column (used for text) -->
-                        <h3>Cookly | Recipe App</h3><!-- heading for the project -->
-                        <p><!-- open paragraph -->
-                            Cookly is a responsive web app designed for cooking enthusiasts of all skill levels. Acting as a personal 
-                            chef assistant, it helps users explore recipes, manage ingredients, and navigate the cooking process with ease.
-                        </p>
-                        <p>
-                            This project emphasized user testing and direct feedback, allowing me to refine the interface and prioritize 
-                            user needs. By overcoming designer biases, I ensured a truly user-centric experience, making Cookly an intuitive 
-                            and practical tool for home cooks and chefs alike.
-                        </p>
-                        <a href="cookly.html" class="button">Read More</a>
-                    </div><!-- end second column -->
-                </div><!-- end row that holds (2) columns for project -->
-            </div><!-- end work container -->
-        </section><!-- end work section -->
+                    <div class="card-content">
+                        <h3>Seedly | Plant Care & eCommerce</h3>
+                        <p>Native mobile app to help gardening enthusiasts nurture healthier plants and shop seamlessly.</p>
+                        <a href="seedly.html" class="button seedly-btn">See Project</a>
+                    </div>
+                </div>
+
+                <!-- BANQ Card -->
+                <div class="case-study-card banq-card hidden" style="transition-delay: 0.4s;">
+                    <div class="card-image">
+                        <img src="img/banq/banq-landing-page-thumbnail@2x.jpg" alt="BANQ App Mockup">
+                    </div>
+                    <div class="card-content">
+                        <h3>BANQ | Personal Finance App</h3>
+                        <p>Responsive web app designed to help users save money effortlessly with AI-powered insights.</p>
+                        <a href="banq.html" class="button banq-btn">See Project</a>
+                    </div>
+                </div>
+
+                <!-- Cookly Card -->
+                <div class="case-study-card cookly-card hidden" style="transition-delay: 0.6s;">
+                    <div class="card-image">
+                        <img src="img/cookly/cookly-landing-page-thumbnail@2x.jpg" alt="Cookly App Mockup">
+                    </div>
+                    <div class="card-content">
+                        <h3>Cookly | Recipe App</h3>
+                        <p>Responsive cooking companion app to help home cooks explore, organize, and prepare recipes easily.</p>
+                        <a href="cookly.html" class="button cookly-btn">See Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <script src="js/interactive.js" defer></script>
     </main>
 

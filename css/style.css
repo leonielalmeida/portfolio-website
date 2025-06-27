@@ -69,7 +69,7 @@ a {
 }
 
 a:hover {
-  color: #65daa3;
+  color: #dbdbdb;
   text-decoration: underline; /* Underlining when hovering over a link */
 }
 
@@ -140,22 +140,6 @@ a.btn.cookly-btn:hover {
   background-color: #e05a73;
   color: white;
   transform: translateY(-2px);
-}
-
-.button.contact {
-  background-color: #007bff;
-  color: #007bff;
-  text-transform: uppercase;
-  border: 2px solid #ff7f50;
-}
-
-.button.contact:hover {
-  background-color: #ff7f50;
-  color: #fff;
-}
-
-.button:hover {
-  opacity: 0.8;
 }
 
 /* ==============================
@@ -246,6 +230,10 @@ picture img {
 #work .row {
   padding-bottom: 25px;
   border-bottom: none; /* Removes the lines */
+}
+
+#work {
+  margin-top: -40px; /* pull entire section up */
 }
 
 .social {
@@ -710,7 +698,6 @@ body.case-study-page header .logo-wrapper {
   margin-top: -4px;   /* scoot up */
 }
 
-
 /* Keep the logo size same everywhere */
 header .logo {
   max-width: 100px;
@@ -754,20 +741,213 @@ header .logo {
 }
 
 .button.contact {
-  background-color: #007bff; /* Daffodil yellow for button */
-  color: #fff; /* Primary color for text */
-  padding: 12px 30px; /* Makes the button more clickable */
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 30px;
   text-transform: uppercase;
   font-weight: 600;
-  border-radius: 25px;
+  border-radius: 6px; /* square corners */
   transition: all 0.3s ease-in-out;
-  border: none; /* No border */
+  border: none;
 }
 
 .button.contact:hover {
-  background-color: #007bff; /* Changes the button color on hover */
-  color: #5de4c2; /* White text on hover */
-  transform: scale(1.05); /* Slightly grows the button for a subtle effect */
+  background-color: #0c60dd;
+  color: #fff;
+}
+
+/* Adjust Hero */
+.hero-flex {
+  position: relative; /* Add this */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-text {
+  flex: 1 1 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: -4rem; /* Increased upward shift */
+}
+
+.hero-image {
+  flex: 1 1 0;
+  display: flex;
+  margin-left: 6rem;
+  margin-top: -3rem;   /* ⬆️ Pull it upward */
+  max-width: 550px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  color: #2d2d2d;
+  text-transform: lowercase;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #555;
+  font-weight: 300;
+  max-width: 800px;   /* 🔧 Set a max width */
+  margin: 0;          /* Remove default spacing */
+}
+
+.butterfly {
+  position: absolute;
+  top: 15%;     /* ← Adjust this visually */
+  left: 14%;    /* ← Adjust based on where you want it */
+  width: 90px;
+  animation: flutter 5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.case-study-hero {
+  width: 100%;
+  margin: 0;
+}
+
+.case-study-hero picture img {
+  width: 100%;
+  max-width: none; /* Remove limit */
+  height: auto;    /* Keep natural image ratio */
+  display: block;
+  border-radius: 0; 
+  box-shadow: none;
+  object-fit: unset; /* Not needed if no forced height */
+}
+
+@keyframes flutter {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-28px) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(6deg);
+  }
+  75% {
+    transform: translateY(-25px) rotate(-8deg);
+  }
+}
+
+.case-study-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4rem;
+  background: #f5f5f5;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 4rem 4rem;
+  margin: 2.5rem 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
+}
+
+.case-study-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.card-image img {
+  max-width: 500px; /* or 550px — test what looks best */
+}
+
+.card-content {
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.card-content h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #2d2d2d;
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.card-content .button {
+  border-radius: 6px; /* keeps your square corners */
+  padding: 11px 24px; /* increase this as you like */
+}
+
+/* Unique backgrounds per project */
+.seedly-card {
+  background: #ffe2dc; /* Soft coral tint for Seedly */
+}
+
+.banq-card {
+  background: #d2d7ff; /* Soft blue tint for BANQ */
+}
+
+.cookly-card {
+  background: #ffd3dd; /* Soft pink tint for Cookly */
+}
+
+.seedly-card .button {
+  background-color: #CC806F;
+}
+
+.banq-card .button {
+  background-color: #6364FF;
+}
+
+.cookly-card .button {
+  background-color: #FC748D;
+}
+
+.seedly-card .button:hover {
+  background-color: #bd6e5f;
+}
+
+.banq-card .button:hover {
+  background-color: #4f50e3;
+}
+
+.cookly-card .button:hover {
+  background-color: #e05a73;
+}
+
+@media (max-width: 768px) {
+  .case-study-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-content {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .card-image img {
+    max-width: 100%; /* Full width on small screens */
+  }
 }
 
 /* Mobile Responsiveness */
@@ -868,109 +1048,13 @@ Case Study Image & Layout Fixes
 /* Javascript */
 .hidden {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: opacity, transform;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .fade-in {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Adjust Hero */
-.hero-flex {
-  position: relative; /* Add this */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.hero-text {
-  flex: 1 1 0;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: -4rem; /* Increased upward shift */
-}
-
-.hero-image {
-  flex: 1 1 0;
-  display: flex;
-  margin-left: 6rem;
-  margin-top: -3rem;   /* ⬆️ Pull it upward */
-  max-width: 550px;
-}
-
-.hero-image img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-
-.hero-text h1 {
-  font-size: 3.25rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  text-transform: lowercase;
-  color: #2d2d2d;
-  margin: 0 0 0.75rem 0;
-}
-
-.subtitle {
-  font-size: 1.15rem;
-  color: #555;
-  font-weight: 300;
-  max-width: 800px;   /* 🔧 Set a max width */
-  margin: 0;          /* Remove default spacing */
-}
-
-.butterfly {
-  position: absolute;
-  top: 15%;     /* ← Adjust this visually */
-  left: 14%;    /* ← Adjust based on where you want it */
-  width: 90px;
-  animation: flutter 5s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.case-study-hero {
-  width: 100%;
-  margin: 0;
-}
-
-.case-study-hero picture img {
-  width: 100%;
-  max-width: none; /* Remove limit */
-  height: auto;    /* Keep natural image ratio */
-  display: block;
-  border-radius: 0; 
-  box-shadow: none;
-  object-fit: unset; /* Not needed if no forced height */
-}
-
-@keyframes flutter {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-28px) rotate(-10deg);
-  }
-  50% {
-    transform: translateY(0px) rotate(6deg);
-  }
-  75% {
-    transform: translateY(-25px) rotate(-8deg);
-  }
 }
 
 /* ==============================
