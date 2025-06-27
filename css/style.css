@@ -162,10 +162,13 @@ a.btn.cookly-btn:hover {
 Global Elements
 ================================= */
 header {
-  background-color: rgba(252, 251, 244);
-  position: relative;
-  padding: 0.5rem 0;
-  margin: 0px;
+  position: absolute;   /* float above hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;  /* see-through */
+  z-index: 10;
+  padding: 2rem 0;  /* adjust padding to taste */
 }
 
 .logo {
@@ -356,7 +359,7 @@ Page Specific
 ================================= */
 .hero {
   background-color: #fcfbf4;
-  padding: 0rem 0 2rem;; /* much tighter spacing */
+  padding: 7rem 0 2rem; /* ⬅️ add top padding! */
   display: flex;
   justify-content: center;
 }
@@ -408,7 +411,6 @@ Page Specific
 }
 
 /* Updated About Section Styling */
-
 section.about {
   background-color: #fcfbf4;
   padding: 5rem 2rem;
@@ -629,6 +631,90 @@ header .main-nav a:hover::after {
 header .main-nav a.active {
   color: #5de4c2; /* Highlight color */
   font-weight: 600; /* Emphasize active link */
+}
+
+/* ==============================
+CASE STUDY HEADER COLORS
+================================ */
+
+/* Seedly nav & logo wrap */
+body.seedly-page header .main-nav a {
+  color: #f37f65; /* Seedly coral shade */
+}
+
+body.seedly-page header .main-nav a:hover {
+  color: #bd6e5f;
+}
+
+body.seedly-page header .main-nav a::after {
+  background-color: #CC806F;
+}
+
+body.seedly-page header .main-nav a:hover::after {
+  background-color: #bd6e5f;
+}
+
+body.seedly-page header .logo-wrapper {
+  background: rgba(204, 128, 111, 0.1);
+}
+
+/* BANQ nav & logo wrap */
+body.banq-page header .main-nav a {
+  color: #6364FF; /* BANQ blue */
+}
+
+body.banq-page header .main-nav a:hover {
+  color: #4f50e3;
+}
+
+body.banq-page header .main-nav a::after {
+  background-color: #6364FF;
+}
+
+body.banq-page header .main-nav a:hover::after {
+  background-color: #4f50e3;
+}
+
+body.banq-page header .logo-wrapper {
+  background: rgba(99, 100, 255, 0.1);
+}
+
+/* Cookly nav & logo wrap */
+body.cookly-page header .main-nav a {
+  color: #FC748D; /* Cookly pink */
+}
+
+body.cookly-page header .main-nav a:hover {
+  color: #e05a73;
+}
+
+body.cookly-page header .main-nav a::after {
+  background-color: #FC748D;
+}
+
+body.cookly-page header .main-nav a:hover::after {
+  background-color: #e05a73;
+}
+
+body.cookly-page header .logo-wrapper {
+  background: rgba(252, 116, 141, 0.1);
+}
+
+/* For case study only */
+body.case-study-page header .logo-wrapper {
+  background: rgba(252, 251, 244, 0.6);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-left: -8px; /* scoot left */
+  margin-top: -4px;   /* scoot up */
+}
+
+
+/* Keep the logo size same everywhere */
+header .logo {
+  max-width: 100px;
+  height: auto;
 }
 
 /* Footer Container */
@@ -857,6 +943,21 @@ Case Study Image & Layout Fixes
   z-index: 2;
 }
 
+.case-study-hero {
+  width: 100%;
+  margin: 0;
+}
+
+.case-study-hero picture img {
+  width: 100%;
+  max-width: none; /* Remove limit */
+  height: auto;    /* Keep natural image ratio */
+  display: block;
+  border-radius: 0; 
+  box-shadow: none;
+  object-fit: unset; /* Not needed if no forced height */
+}
+
 @keyframes flutter {
   0%, 100% {
     transform: translateY(0) rotate(0deg);
@@ -875,6 +976,89 @@ Case Study Image & Layout Fixes
 /* ==============================
 Media Queries
 ================================= */
+
+/* ==============================
+Mobile Layout Fixes (<= 480px)
+================================= */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    align-items: center;
+    margin-top: -2rem;
+  }
+
+  .hero-image {
+    margin-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: auto;
+    max-width: 180px;
+  }
+
+  .butterfly {
+    top: 14%;
+    left: 50%;
+    width: 38px;
+    transform: translateX(-50%);
+  }
+}
+
+/* ==============================
+Tablet Layout (<= 768px)
+================================= */
+@media only screen and (max-width: 768px) {
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    align-items: center;
+    margin-top: -3rem;
+  }
+
+  .hero-image {
+    margin-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: auto;
+    max-width: 250px;
+  }
+
+  .butterfly {
+    top: 16%;
+    left: 50%;
+    width: 50px;
+    transform: translateX(-50%);
+  }
+}
 
 /* ==============================
 Medium devices (640px and larger)
@@ -968,88 +1152,5 @@ X-large devices (1440px or larger)
 @media only screen and (min-width: 1440px) {
   .navtoggle li:last-child {
     display: none;
-  }
-}
-
-/* ==============================
-Mobile Layout Fixes (<= 480px)
-================================= */
-@media only screen and (max-width: 480px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.75em;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.5;
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  .hero-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text {
-    text-align: center;
-    align-items: center;
-    margin-top: -2rem;
-  }
-
-  .hero-image {
-    margin-left: 0;
-    padding-right: 0;
-    justify-content: center;
-  }
-
-  .hero-image img {
-    width: auto;
-    max-width: 180px;
-  }
-
-  .butterfly {
-    top: 14%;
-    left: 50%;
-    width: 38px;
-    transform: translateX(-50%);
-  }
-}
-
-/* ==============================
-Tablet Layout (<= 768px)
-================================= */
-@media only screen and (max-width: 768px) {
-  .hero-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text {
-    text-align: center;
-    align-items: center;
-    margin-top: -3rem;
-  }
-
-  .hero-image {
-    margin-left: 0;
-    padding-right: 0;
-    justify-content: center;
-  }
-
-  .hero-image img {
-    width: auto;
-    max-width: 250px;
-  }
-
-  .butterfly {
-    top: 16%;
-    left: 50%;
-    width: 50px;
-    transform: translateX(-50%);
   }
 }
