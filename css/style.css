@@ -103,45 +103,6 @@ a:active {
   transform: translateY(-2px);
 }
 
-/* Only the Seedly button gets these colors */
-a.btn.seedly-btn {
-  background-color: #CC806F;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-a.btn.seedly-btn:hover {
-  background-color: #bd6e5f;
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* Only the BANQ button gets these colors */
-a.btn.banq-btn {
-  background-color: #6364FF;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-a.btn.banq-btn:hover {
-  background-color: #4f50e3;
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* Only the Cookly button gets these colors */
-a.btn.cookly-btn {
-  background-color: #FC748D;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-a.btn.cookly-btn:hover {
-  background-color: #e05a73;
-  color: white;
-  transform: translateY(-2px);
-}
-
 /* ==============================
 Global Elements
 ================================= */
@@ -259,13 +220,28 @@ picture img {
 }
 
 /* Global Button Styling */
-button, .btn {
+/* GOOD: Native buttons only */
+button {
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  background-color: #007bff; /* Primary button color */
+  background-color: #007bff; /* Keep fallback for real <button> */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
   border: none;
   border-radius: 5px;
   text-decoration: none;
@@ -278,12 +254,6 @@ button, .btn {
 button:hover, .btn:hover {
   background-color: #0056b3; /* Darker shade for hover */
   transform: translateY(-2px);
-}
-
-/* Focus Effect */
-button:focus, .btn:focus {
-  outline: 2px solid #80bdff;
-  outline-offset: 2px;
 }
 
 /* Disabled Button */
@@ -402,6 +372,7 @@ Page Specific
 section.about {
   background-color: #fcfbf4;
   padding: 5rem 2rem;
+  margin-top: 5rem; /* 👈 pushes it down */
 }
 
 .about-container {
@@ -705,55 +676,58 @@ header .logo {
 }
 
 /* Footer Container */
-.footer-container {
-  background-color: #fcfbf4; /* Matches your website's theme */
-  padding: 5px 0; /* Adds spacing to the top and bottom */
-  text-align: center;
+.footer {
+  border-top: 1px solid #e0e0e0;
+  background-color: #fcfbf4;
+  padding: 3rem 2rem 1.5rem;
+  text-align: left;
 }
 
-.footer-content h2 {
-  font-size: 2em; /* Larger font size for heading */
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-column h4 {
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #007bff; /* Matches your primary color */
-  margin-bottom: 15px; /* Adds space below the heading */
-}
-
-.footer-content p {
-  font-size: 1.1em; /* Slightly larger text for readability */
-  color: #4a4a4a;
-  line-height: 1.5;
-  margin-bottom: 15px; /* Adds space below the paragraph */
-}
-
-.phone-link {
-  color: #465fa4;
-  font-weight: 600; /* Makes the phone number stand out */
-}
-
-.phone-link:hover {
-  color: #5de4c2; /* Hover effect for phone link */
-  text-decoration: underline;
-}
-
-.email-button {
-  margin-top: 20px;
-  margin-bottom: 30px; /* Adds more space after the button */
-}
-
-.button.contact {
-  background-color: #007bff;
-  color: #fff;
-  padding: 12px 30px;
   text-transform: uppercase;
-  font-weight: 600;
-  border-radius: 6px; /* square corners */
-  transition: all 0.3s ease-in-out;
-  border: none;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+  color: #2d2d2d;
 }
 
-.button.contact:hover {
-  background-color: #0c60dd;
-  color: #fff;
+.footer-column p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #4a4a4a;
+}
+
+.footer-column a {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #0044ff;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* Adjust Hero */
@@ -933,6 +907,54 @@ header .logo {
 .cookly-card .button:hover {
   background-color: #e05a73;
 }
+
+/* Only the Seedly button gets these colors */
+a.btn.seedly-btn {
+  background-color: #CC806F;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a.btn.seedly-btn:hover {
+  background-color: #bd6e5f;
+  color: white;
+  transform: translateY(-2px);
+}
+
+a.btn.seedly-btn:focus,
+a.btn.seedly-btn:active { background-color: #bd6e5f !important; outline: none; }
+
+/* Only the BANQ button gets these colors */
+a.btn.banq-btn {
+  background-color: #6364FF;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a.btn.banq-btn:hover {
+  background-color: #4f50e3;
+  color: white;
+  transform: translateY(-2px);
+}
+
+a.btn.banq-btn:focus,
+a.btn.banq-btn:active { background-color: #4f50e3 !important; outline: none; }
+
+/* Only the Cookly button gets these colors */
+a.btn.cookly-btn {
+  background-color: #FC748D;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a.btn.cookly-btn:hover {
+  background-color: #e05a73;
+  color: white;
+  transform: translateY(-2px);
+}
+
+a.btn.cookly-btn:focus,
+a.btn.cookly-btn:active { background-color: #e05a73 !important; outline: none; }
 
 @media (max-width: 768px) {
   .case-study-card {
