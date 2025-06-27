@@ -798,7 +798,7 @@ header .logo {
   flex: 1 1 0;
   display: flex;
   margin-left: 6rem;
-  margin-top: -3rem;   /* ⬆️ Pull it upward */
+  margin: 0;      /* ⬅️ Remove left shift */
   max-width: 550px;
 }
 
@@ -820,6 +820,15 @@ header .logo {
   text-transform: lowercase;
 }
 
+.hero-art {
+  position: relative;   /* ⬅️ makes butterfly position relative to this block */
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 550px;
+}
+
 .subtitle {
   font-size: 1.15rem;
   color: #555;
@@ -830,9 +839,9 @@ header .logo {
 
 .butterfly {
   position: absolute;
-  top: 15%;     /* ← Adjust this visually */
-  left: 14%;    /* ← Adjust based on where you want it */
-  width: 90px;
+  top: 10%;
+  left: 10%;
+  width: 80px;
   animation: flutter 5s ease-in-out infinite;
   pointer-events: none;
   z-index: 2;
@@ -1172,6 +1181,69 @@ Mobile Layout Fixes (<= 480px)
     width: 38px;
     transform: translateX(-50%);
   }
+
+  .case-study-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .card-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .card-content p {
+    font-size: 0.95rem;
+  }
+
+  .card-content .button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+
+/* ==============================
+Medium mobile to tablet (<= 640px)
+================================= */
+@media (max-width: 640px) {
+  .case-study-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .card-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    margin-left: 0;
+    margin-top: 1.2rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+  }
 }
 
 /* ==============================
@@ -1206,10 +1278,36 @@ Tablet Layout (<= 768px)
     width: 50px;
     transform: translateX(-50%);
   }
+
+  .case-study-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+    padding: 2.5rem 2rem;
+  }
+
+  .card-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .card-content p {
+    font-size: 1.05rem;
+  }
 }
 
 /* ==============================
-Medium devices (640px and larger)
+Medium devices (>= 640px)
 ================================= */
 @media only screen and (min-width: 640px) {
   [class*="col-"] {
@@ -1268,7 +1366,38 @@ Medium devices (640px and larger)
 }
 
 /* ==============================
-Large devices (1024px or larger)
+Small desktop / large tablet (<= 1024px)
+================================= */
+@media (max-width: 1024px) {
+  .case-study-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    padding: 3rem 3rem;
+  }
+
+  .card-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    margin-left: 0;
+    margin-top: 1.8rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.65rem;
+  }
+
+  .card-content p {
+    font-size: 1.1rem;
+  }
+}
+
+/* ==============================
+Large devices (>= 1024px)
 ================================= */
 @media only screen and (min-width: 1024px) {
   .container {
@@ -1295,10 +1424,65 @@ Large devices (1024px or larger)
 }
 
 /* ==============================
-X-large devices (1440px or larger)
+X-large devices (>= 1440px)
 ================================= */
 @media only screen and (min-width: 1440px) {
   .navtoggle li:last-child {
     display: none;
+  }
+}
+
+/* ==============================
+Butterfly Specific Breakpoints
+================================= */
+
+/* Default (Large Desktop) */
+.butterfly {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 80px;
+  animation: flutter 5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Large Desktop (≤ 1440px) */
+@media (max-width: 1440px) {
+  .butterfly {
+    top: 20%;
+    left: 20%;
+    width: 70px;
+    transform: none;
+  }
+}
+
+/* Medium Desktop / Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .butterfly {
+    top: 20%;
+    left: 20%;
+    width: 60px;
+    transform: translateX(-50%);
+  }
+}
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .butterfly {
+    top: 20%;
+    left: 18%;
+    width: 45px;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .butterfly {
+    top: 20%;
+    left:18%;
+    width: 35px;
+    transform: translateX(-50%);
   }
 }
