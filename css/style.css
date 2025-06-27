@@ -458,7 +458,7 @@ section.about {
   padding: 12px 24px;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 30px;
+  border-radius: 6px;   /* ← FIXED from 30px */
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -565,7 +565,7 @@ header .main-nav a {
 
 /* Hover Effect */
 header .main-nav a:hover {
-  color: #5de4c2; /* Subtle color change on hover */
+  color: #007bff; /* Bright blue instead of teal */
 }
 
 header .main-nav a::after {
@@ -575,7 +575,7 @@ header .main-nav a::after {
   left: 0;
   right: 0;
   height: 2px; /* Thickness of the underline */
-  background-color: #5de4c2; /* Yellow underline color */
+  background-color: #007bff; /* Bright blue underline */
   transform: scaleX(0); /* Start with no underline */
   transition: transform 0.3s ease; /* Smooth animation */
   transform-origin: left; /* Animate from the left */
@@ -588,8 +588,35 @@ header .main-nav a:hover::after {
 
 /* Active link styling */
 header .main-nav a.active {
-  color: #5de4c2; /* Highlight color */
+  color: #007bff; /* Active link bright blue */
   font-weight: 600; /* Emphasize active link */
+}
+
+/* Base site (index/about) nav & logo wrap */
+body.index-page header .main-nav a,
+body.about-page header .main-nav a {
+  color: #2067b3; /* Bright blue */
+}
+
+body.index-page header .main-nav a:hover,
+body.about-page header .main-nav a:hover {
+  color: #007bff; /* Darker blue on hover */
+}
+
+body.index-page header .main-nav a::after,
+body.about-page header .main-nav a::after {
+  background-color: #007bff; /* Underline bright blue */
+}
+
+body.index-page header .main-nav a:hover::after,
+body.about-page header .main-nav a:hover::after {
+  background-color: #0056b3; /* Underline darker blue on hover */
+}
+
+body.index-page header .main-nav a.active,
+body.about-page header .main-nav a.active {
+  color: #007bff; /* Active link bright blue */
+  font-weight: 600;
 }
 
 /* ==============================
@@ -598,7 +625,7 @@ CASE STUDY HEADER COLORS
 
 /* Seedly nav & logo wrap */
 body.seedly-page header .main-nav a {
-  color: #f37f65; /* Seedly coral shade */
+  color: #cf583d; /* Seedly coral shade */
 }
 
 body.seedly-page header .main-nav a:hover {
@@ -613,13 +640,18 @@ body.seedly-page header .main-nav a:hover::after {
   background-color: #bd6e5f;
 }
 
+body.seedly-page header .main-nav a.active {
+  color: #f37f65;
+  font-weight: 600;
+}
+
 body.seedly-page header .logo-wrapper {
   background: rgba(204, 128, 111, 0.1);
 }
 
 /* BANQ nav & logo wrap */
 body.banq-page header .main-nav a {
-  color: #6364FF; /* BANQ blue */
+  color: #2d2dc2; /* BANQ blue */
 }
 
 body.banq-page header .main-nav a:hover {
@@ -634,13 +666,18 @@ body.banq-page header .main-nav a:hover::after {
   background-color: #4f50e3;
 }
 
+body.banq-page header .main-nav a.active {
+  color: #6364FF;
+  font-weight: 600;
+}
+
 body.banq-page header .logo-wrapper {
   background: rgba(99, 100, 255, 0.1);
 }
 
 /* Cookly nav & logo wrap */
 body.cookly-page header .main-nav a {
-  color: #FC748D; /* Cookly pink */
+  color: #d43451; /* Cookly pink */
 }
 
 body.cookly-page header .main-nav a:hover {
@@ -653,6 +690,11 @@ body.cookly-page header .main-nav a::after {
 
 body.cookly-page header .main-nav a:hover::after {
   background-color: #e05a73;
+}
+
+body.cookly-page header .main-nav a.active {
+  color: #FC748D;
+  font-weight: 600;
 }
 
 body.cookly-page header .logo-wrapper {
