@@ -817,7 +817,7 @@ header .logo {
   letter-spacing: 0.5px;
   line-height: 1.2;
   color: #2d2d2d;
-  text-transform: lowercase;
+  text-transform: none;
 }
 
 .hero-art {
