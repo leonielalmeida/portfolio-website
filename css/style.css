@@ -55,11 +55,6 @@ h6 {
   font-weight: 500;
 }
 
-a {
-  color: #465fa4;
-  text-decoration: none; /* No underlining */
-}
-
 /* ==============================
 General link
 ================================= */
@@ -141,10 +136,6 @@ nav > ul > li > a {
   position: relative;
 }
 
-.navtoggle.responsive {
-  position: relative;
-}
-
 .navtoggle li .icon {
   position: absolute;
   right: 0;
@@ -177,11 +168,9 @@ main {
 
 picture img {
   width: 100%;
-  max-width: 700px; /* Makes images more dominant */
+  max-width: 700px; 
   display: block;
   margin: 0 auto;
-  border-radius: 10px; /* Adds smooth edges */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle depth */
 }
 
 .row {
@@ -209,14 +198,6 @@ picture img {
 .social svg {
   width: 50px;
   height: auto;
-}
-
-/* Fix image width for case study pages */
-.case-study img {
-  width: 100%;
-  max-width: 1000px; /* Adjust this to match your text width */
-  display: block;
-  margin: 0 auto;
 }
 
 /* Global Button Styling */
@@ -797,7 +778,6 @@ header .logo {
 .hero-image {
   flex: 1 1 0;
   display: flex;
-  margin-left: 6rem;
   margin: 0;      /* ⬅️ Remove left shift */
   max-width: 550px;
 }
@@ -849,17 +829,19 @@ header .logo {
 
 .case-study-hero {
   width: 100%;
-  margin: 0;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .case-study-hero picture img {
   width: 100%;
-  max-width: none; /* Remove limit */
-  height: auto;    /* Keep natural image ratio */
+  height: 100%;
+  max-width: none;    /* ⬅️ kills the 700px limit */
+  object-fit: cover;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   display: block;
-  border-radius: 0; 
-  box-shadow: none;
-  object-fit: unset; /* Not needed if no forced height */
 }
 
 @keyframes flutter {
@@ -1073,38 +1055,293 @@ Animations
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-/* ==============================
-Case Study Image & Layout Fixes
-================================= */
-
-/* Ensures all case study content stays within the same width */
+/* Case Studies Layout */
 .case-study-container {
-  width: 90%;
-  max-width: 1000px; /* Matches text and image width */
-  margin: 0 auto; /* Centers content */
+  max-width: 1200px;  /* ← wider! */
+  margin: 0 auto;
+  padding: 6rem 2rem; /* small side padding for big screens */
 }
 
-/* Ensures images align with text */
+.case-study-section p,
+.case-study-section ul {
+  max-width: none; /* ← text will expand to fill the container */
+}
+
+.case-study-section {
+  text-align: left;  /* or center if you prefer */
+}
+
+.case-study-section em {
+  display: block;
+  font-style: italic;
+  font-weight: 500;
+  margin: 2rem 0 1rem; /* shorthand */
+  max-width: 70ch;
+}
+
 .case-study-img {
+  max-width: 100%;
+  text-align: center; /* center image if you like */
+}
+
+.case-study-img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;  /* vertical spacing + center */
+  border-radius: 8px; /* optional: soft corners */
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 0rem;       /* nicely spaced from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  cursor: pointer;    /* pointer for clickability */
+}
+
+.scroll-arrow {
+  stroke: #ecd9d4;
+  width: 65px;        /* ⬅️ slightly larger */
+  height: 65px;       /* ⬅️ slightly larger */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);  /* subtle bounce */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.case-study-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  padding: 4rem 0; /* match your other sections → no side indent here */
+}
+
+.case-study-text {
+  max-width: 600px;
+}
+
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.75rem;
+  color: #999; /* subtle light grey */
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.case-study-text h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.case-study-text p {
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #444;
+}
+
+.case-study-image img {
+  max-width: 100%;
+  display: block;
+  border-radius: 4px; /* optional */
+}
+
+.case-study-image-group .case-study-img {
+  flex: 1 1 45%; /* side by side */
+}
+
+.case-study-images-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.overview-problem-solution {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  margin: 6rem 0; /* 👈 adds space above & below */
+}
+
+.ops-block {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.ops-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.ops-image img {
+  max-width: 350px; /* smaller max width */
   width: 100%;
-  max-width: 1000px; /* Matches text width */
-  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.ops-text {
+  max-width: 600px;
+}
+
+.background-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0rem;
+
+  width: 100vw;   /* FULL viewport width! */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  padding: 4rem 6rem;
+  background: #fcfbf4; /* or none — your choice */
+  margin-bottom: 10rem; /* 👈 ADDS GAP BELOW */
+}
+
+.background-text, .background-image {
+  flex: 1;
+}
+
+.background-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* optional */
+}
+
+.wireframes-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* 👈 center text vertically with images */
+  gap: 4rem;
+
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  padding: 4rem 6rem;
+  background: #fcfbf4;
+  margin-bottom: 4rem;
+}
+
+.wireframes-images {
+  flex: 1;
+}
+
+.wireframes-text {
+  flex: 1;
+}
+
+.case-study-img {
+  max-width: 100%;
+  margin-bottom: 2rem; /* gap between images if stacked */
 }
 
 .case-study-img img {
   width: 100%;
   height: auto;
-  max-width: 1000px;
-  display: block;
-  border-radius: 10px; /* Optional rounded edges */
+  border-radius: 8px;
 }
 
-/* Ensures text aligns properly with images */
-.case-study-text {
-  max-width: 1000px; /* Matches image width */
-  margin: 0 auto;
-  text-align: left; /* Keeps left-aligned on larger screens */
-  padding-top: 20px;
+/* This makes the ANDROID image shift right and down for a diagonal look */
+.android-offset {
+  margin-left: 4rem;   /* pushes it right */
+  margin-top: 4rem;    /* pushes it down */
+}
+
+.prototype-section {
+  margin-bottom: 4rem; /* or any size */
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .case-study-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .case-study-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .case-study-image {
+    margin-top: 2rem; /* add space between text & image */
+  }
+}
+
+@media (max-width: 768px) {
+  .ops-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ops-block.reverse {
+    flex-direction: column;
+  }
+
+  .ops-text {
+    max-width: 100%;
+  }
+
+  .ops-image img {
+    max-width: 100%; /* Full width on small screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .background-flex {
+    flex-direction: column;
+    text-align: center;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;  /* Normal block flow */
+    padding: 2rem;
+  }
+
+  .background-image {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wireframes-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wireframes-images {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wireframes-flex {
+    flex-direction: column;
+  }
+  .android-offset {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
 }
 
 /* Adjust layout for mobile responsiveness */
