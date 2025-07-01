@@ -37,154 +37,232 @@
         </div>
     </header>
 
-    <main>
-        <div><!--Case Study-->
-            <div class="case-study-hero">
-                <picture>
-                    <source srcset="img/banq/banq-portfolio-thumbnail@1x.jpg" media="(max-width:767px)">
-                    <img src="img/banq/banq-portfolio-thumbnail@2x.jpg"
-                        alt="BANQ App: Designing a Money-Saving App by Leonie Almeida">
-                </picture>
-            </div>
-                <div class="case-study-text">
-                    <h2>Introduction</h2>
-                    <p><!-- open paragraph -->
-                        BANQ is a responsive web application designed for anyone looking to save money effortlessly. 
-                        The app was built to provide a seamless and intuitive experience, helping users take control of their 
-                        finances with ease. BANQ focuses on trust, simplicity, and forward-thinking design, ensuring that users 
-                        feel empowered on their financial journey.
-                    </p>
-                    <p>
-                        This project allowed me to integrate AI-driven recommendations to optimize saving habits while prioritizing 
-                        user needs through research and testing. By focusing on a user-centered approach, I created an accessible and 
-                        engaging platform that makes financial management stress-free and effective.
-                    </p>
+    <main class="banq-page">
+        <!-- Hero Image -->
+        <div class="case-study-hero">
+            <picture>
+                <source srcset="img/banq/banq-portfolio-thumbnail@1x.jpg" media="(max-width:767px)">
+                <img src="img/banq/banq-portfolio-thumbnail@2x.jpg"
+                    alt="BANQ App: Designing a Money-Saving App by Leonie Almeida">
+            </picture>
 
-                    <em>Basic App Features</em>
-                    <ul>
-                        <li>Onboarding</li>
-                        <li>A navigation bar that allows users to navigate through the entire application</li>
-                        <li>User customized experienced: dashboard, analytics, saving goals, AI voice assistant, alerts,
-                            profile preferences</li>
-                    </ul>
-                    <div class="case-study-img">
-                        <picture>
-                            <source srcset="img/banq/overview@1x.jpg" media="(max-width:767px)">
-                            <img src="img/banq/overview@2x.jpg"
-                                alt="BANQ: Overview">
-                        </picture>
-                    </div>
+            <!-- Clickable Arrow -->
+            <a href="#case-study-content" class="scroll-cue">
+                <svg class="scroll-arrow" xmlns="http://www.w3.org/2000/svg"
+                    width="60" height="60" viewBox="0 0 24 24"
+                    fill="none" stroke="#555" stroke-width="1"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+        </div>
+
+        <div id="case-study-content" class="case-study-container">
+            <!-- Intro Section -->
+            <section class="case-study-section">
+                <h1 class="section-label">Introduction</h1>
+                <p><!-- open paragraph -->
+                    BANQ is a responsive web application designed for anyone looking to save money effortlessly. 
+                    The app was built to provide a seamless and intuitive experience, helping users take control of their 
+                    finances with ease. BANQ focuses on trust, simplicity, and forward-thinking design, ensuring that users 
+                    feel empowered on their financial journey.
+                </p>
+                <p>
+                    This project allowed me to integrate AI-driven recommendations to optimize saving habits while prioritizing 
+                    user needs through research and testing. By focusing on a user-centered approach, I created an accessible and 
+                    engaging platform that makes financial management stress-free and effective.
+                </p>
+                <h6 class="section-label">Key Features</h6>
+                <ul>
+                    <li>Onboarding flow</li>
+                    <li>Easy navigation bar</li>
+                   <li>User customized experienced: dashboard, analytics, saving goals, AI voice assistant, alerts,
+                    profile preferences</li>
+                </ul>
+            </section>
+
+            <!-- Overview Section (BANQ style, no background block) -->
+            <section class="overview-flex">
+                <div class="overview-image">
+                    <picture>
+                        <source srcset="img/banq/overview@1x.jpg" media="(max-width:767px)">
+                        <img src="img/banq/overview@2x.jpg"
+                            alt="BANQ: Overview">
+                    </picture>
                 </div>
-                <div class="case-study-text">
-                    <h2>Background</h2>
+                <div class="overview-text">
+                    <h1 class="section-label">Overview</h1>
+                    <h3>Problem</h3>
+                    <p>
+                    Countless people have a difficult time keeping up with their finances, as well as expanding their ongoing knowledge in the field. Furthermore, there is far too much crucial information to be familiar with, and saving money for specific goals can be drastically challenging.
+                    </p>
+                    <h3>Solution</h3>
+                    <p>
+                    BANQ offers a free, customizable and personalized experience for everyone. It will solve the issue of users not being familiar with how to take care of their finances and lead to proper financial management, as well as a delightful experience. The app will deliver this information in a simple, yet elegant way.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Background Section -->
+            <section class="background-flex banq-background">
+                <div class="background-text">
+                    <h1 class="section-label">Background</h1>
                     <p>
                         This is an app I designed while being a student at CareerFoundry's UI Design Program.
                     </p>
-
+                    <h6 class="section-label">Project Details</h6>
                     <ul>
-                        <li><em>Duration</em>: 3 Weeks</li>
-                        <li><em>Role</em>: UI/UX Designer, Researcher</li>
-                        <li><em>Tools</em>: Figma</li>
-                        <li><em>Objective</em>: BANQ is a money saving app meant for anyone who wants to save money and keep 
+                        <li><strong>Duration:</strong> 3 Weeks</li>
+                        <li><strong>Role:</strong> UI/UX Designer, Researcher</li>
+                        <li><strong>Tools:</strong> Figma</li>
+                        <li><strong>Objective:</strong> BANQ is a money saving app meant for anyone who wants to save money and keep 
                             better track of their finances.</li>
                     </ul>
                 </div>
-                <div class="case-study-img">
+                <div class="background-image">
                     <picture>
                         <source srcset="img/banq/design-process@1x.jpg" media="(max-width:767px)">
                         <img src="img/banq/design-process@2x.jpg"
                             alt="BANQ: Design Process">
                     </picture>
                 </div>
-                <div class="case-study-text">
-                    <h2>User Stories</h2>
-                    <div class="case-study-img">
+            </section>
+
+            <!-- User Stories Section -->
+            <section class="user-stories">
+                <h1 class="section-label">User Stories</h1>
+                
+                <div class="stories-grid">
+                    <div class="story-card">
                         <picture>
-                            <source srcset="img/banq/user-stories@1x.jpg" media="(max-width:767px)">
-                            <img src="img/banq/user-stories@2x.jpg"
+                            <source srcset="img/banq/user-dashboard@1x.jpg" media="(max-width:767px)">
+                            <img src="img/banq/user-dashboard@2x.jpg"
                                 alt="BANQ: User Stories">
                         </picture>
+                        <h3>Dashboard</h3>
+                        <p>As a user, I want to see a dashboard of my finances clearly and visually, so that I can see how much I am spending on what at a glance.</p>
+                    </div>
+
+                    <div class="story-card">
+                        <picture>
+                            <source srcset="img/banq/user-personalized@1x.jpg" media="(max-width:767px)">
+                            <img src="img/banq/user-personalized@2x.jpg"
+                                alt="BANQ: User Stories">
+                        </picture>
+                        <h3>Personalized</h3>
+                        <p>As a new user, I need to be able to create a profile, so that the financial advice I receive is personalized to me, my spending habits, and tailored to my goals.</p>
+                    </div>
+
+                    <div class="story-card">
+                        <picture>
+                            <source srcset="img/banq/user-savings@1x.jpg" media="(max-width:767px)">
+                            <img src="img/banq/user-savings@2x.jpg"
+                                alt="BANQ: User Stories">
+                        </picture>
+                        <h3>Savings</h3>
+                        <p>As a user, I want to see an overview of how much my finances have changed and how much I am saving throughout the saving period, so that I can stay on track.</p>
                     </div>
                 </div>
-                <div id="userflows">
-                    <div class="case-study-text">
-                        <h2>User Flows</h2>
-                        <p> Once the interviews were done, I then curated a user flow based on my users' needs and wants.
-                        </p>
-                        <em>User Needs</em>
-                        <ul>
-                            <li>As a user, I want to see a dashboard of my finances clearly and visually, so that I can see
-                                how much I am spending on what at a glance.</li>
-                            <li>As a new user, I need to be able to create a profile, so that the financial advice I receive
-                                is personalized to me, my spending habits, and tailored to my goals.</li>
-                            <li>As a user, I want to see an overview of how much my finances have changed and how much I am
-                                saving throughout the saving period, so that I can stay on track.</li>
-                        </ul>
+            </section>
+
+            <!-- User Flows Section -->
+            <section class="case-study-section" id="userflows">
+                <h1 class="section-label">User Flows</h1>
+                <p>
+                    Once the interviews were done, I then curated a user flow based on my users' needs and wants.
+                </p>
+                <h6 class="section-label">User Needs</h6>
+                <ul>
+                    <li>As a user, I want to see a dashboard of my finances clearly and visually, so that I can see
+                        how much I am spending on what at a glance.</li>
+                    <li>As a new user, I need to be able to create a profile, so that the financial advice I receive
+                        is personalized to me, my spending habits, and tailored to my goals.</li>
+                    <li>As a user, I want to see an overview of how much my finances have changed and how much I am
+                        saving throughout the saving period, so that I can stay on track.</li>
+                </ul>
+                <div class="case-study-img">
+                    <picture>
+                        <source srcset="img/banq/user-flow-diagram@1x.jpg" media="(max-width:767px)">
+                        <img src="img/banq/user-flow-diagram@2x.jpg"
+                            alt="BANQ: User Flow Diagram">
+                    </picture>
+                </div>
+            </section>
+
+            <!-- Low and Mid Fidelity Wireframes -->
+            <section class="wireframes-flex">
+                <div class="wireframes-images">
+                    <div class="case-study-img">
+                        <picture>
+                            <source srcset="img/banq/low-fidelity-wireframes@1x.jpg" media="(max-width:767px)">
+                            <img src="img/banq/low-fidelity-wireframes@1x.jpg"
+                                alt="BANQ: Wireframes">
+                        </picture>
                     </div>
                     <div class="case-study-img">
                         <picture>
-                            <source srcset="img/banq/user-flow-diagram@1x.jpg" media="(max-width:767px)">
-                            <img src="img/banq/user-flow-diagram@2x.jpg"
-                                alt="BANQ: User Flow Diagram">
+                            <source srcset="img/banq/mid-fidelity-wireframes@1x.jpg" media="(max-width:767px)">
+                            <img src="img/banq/mid-fidelity-wireframes@2x.jpg" alt="Seedly: Mid-Fidelity Wireframes (Android)">
                         </picture>
                     </div>
                 </div>
-                <div id="wireframes">
-                    <div class="case-study-text">
-                        <h2>Wireframes</h2>
-                        <div class="case-study-img">
-                            <picture>
-                                <source srcset="img/banq/wireframes@1x.jpg" media="(max-width:767px)">
-                                <img src="img/banq/wireframes@2x.jpg"
-                                    alt="BANQ: Wireframes">
-                            </picture>
-                        </div>
-                    </div>
+
+                <div class="wireframes-text">
+                    <h1 class="section-label">Low & Mid-Fidelity Wireframes</h1>
+                    <p>These early low-fidelity wireframes helped visualize how BANQ could simplify complex financial information. By sketching out core screens like savings goals, dashboards, and spending insights, I ensured every feature stayed clear and easy to use.</p>
+                    <p>The mid-fidelity wireframes refined the structure with realistic content, showing how users could track goals, manage transactions, and interact with the AI savings assistant without feeling overwhelmed.</p>
+                    <p>Through this stage, I focused on building trust and transparency into the design — helping users feel more confident managing their money step by step.</p>
                 </div>
-                <div id="iterations">
-                    <div class="case-study-text">
-                        <h2>Iterations</h2>
-                        <div>
-                            <h6>Based on user testing, the following iterations were made to allow the user to have a more
-                                efficient experience:</h6>
-                            <ul>
-                                <li>Proper hierarchy was developed into the design as well as moving the Transactions to the
-                                    Analytics screen.</li>
-                                <li>Users wanted the app to have a more modern feel</li>
-                                <li>Financial tips were added to the bottom of the dashboard screen</li>
-                                <li>Color hierarchy was integrated to be easier on the eyes to scan through and see important
-                                    information</li>
-                            </ul>
-                            <div class="case-study-img">
-                                <picture>
-                                    <source srcset="img/banq/testing-and-iteration@1x.jpg" media="(max-width:767px)">
-                                    <img src="img/banq/testing-and-iteration@2x.jpg"
-                                        alt="BANQ: Testing and Iteration">
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
+            </section>
+
+            <!-- Iterations Section -->
+            <section class="case-study-section" id="iterations">
+                <h1 class="section-label">Iterations</h1>
+                <h6>Based on user testing, the following iterations were made to allow the user to have a more
+                    efficient experience:</h6>
+                <ul>
+                    <li>Proper hierarchy was developed into the design as well as moving the Transactions to the
+                        Analytics screen.</li>
+                    <li>Users wanted the app to have a more modern feel</li>
+                    <li>Financial tips were added to the bottom of the dashboard screen</li>
+                    <li>Color hierarchy was integrated to be easier on the eyes to scan through and see important
+                        information</li>
+                </ul>
+                <div class="case-study-img">
+                    <picture>
+                        <source srcset="img/banq/testing-and-iteration@1x.jpg" media="(max-width:767px)">
+                        <img src="img/banq/testing-and-iteration@2x.jpg"
+                            alt="BANQ: Testing and Iteration">
+                    </picture>
                 </div>
-                <div class="case-study-text">
-                    <h2>Branding and Design</h2>
-                    <div class="case-study-img">
-                        <picture>
-                            <source srcset="img/banq/branding-and-design@1x.jpg" media="(max-width:767px)">
-                            <img src="img/banq/branding-and-design@2x.jpg"
-                                alt="BANQ: Branding and Design">
-                        </picture>
-                    </div>
+            </section>    
+        
+            <!-- Branding and Design -->
+            <section class="case-study-section branding-design-section">
+                <h1 class="section-label">Branding and Design</h1>
+                <div class="case-study-img">
+                    <picture>
+                        <source srcset="img/banq/branding-and-design@1x.jpg" media="(max-width:767px)">
+                        <img src="img/banq/branding-and-design@2x.jpg"
+                            alt="BANQ: Branding and Design">
+                    </picture>
                 </div>
-                <div class="case-study-text">
-                    <h2>Final Design</h2>
-                    <div class="case-study-img">
-                        <picture>
-                            <source srcset="img/banq/final-design@1x.jpg" media="(max-width:767px)">
-                            <img src="img/banq/final-design@2x.jpg"
-                                alt="BANQ: Final Design">
-                        </picture>
-                    </div>
+            </section>
+
+            <!-- Final Design Section -->
+            <section class="case-study-section">
+                <h1 class="section-label">Final Design</h1>
+
+                <!-- Main Final Design image -->
+                <div class="case-study-img">
+                    <picture>
+                        <source srcset="img/banq/final-design@1x.jpg" media="(max-width:767px)">
+                        <img src="img/banq/final-design@2x.jpg"
+                            alt="BANQ: Final Design">
+                    </picture>
                 </div>
+
+                <!-- Onboarding Screens -->
                 <div class="case-study-img">
                     <picture>
                         <source srcset="img/banq/onboarding@1x.jpg" media="(max-width:767px)">
@@ -192,6 +270,8 @@
                             alt="BANQ: Onboarding">
                     </picture>
                 </div>
+
+                <!-- Dashboard Screens -->
                 <div class="case-study-img">
                     <picture>
                         <source srcset="img/banq/dashboard@1x.jpg" media="(max-width:767px)">
@@ -199,6 +279,8 @@
                             alt="BANQ: Dashboard">
                     </picture>
                 </div>
+
+                <!-- Mockup Screens -->
                 <div class="case-study-img">
                     <picture>
                         <source srcset="img/banq/mockup@1x.jpg" media="(max-width:767px)">
@@ -206,6 +288,8 @@
                             alt="BANQ: Mockup">
                     </picture>
                 </div>
+
+                <!-- Saving Goals Screens -->
                 <div class="case-study-img">
                     <picture>
                         <source srcset="img/banq/saving-goals@1x.jpg" media="(max-width:767px)">
@@ -213,6 +297,8 @@
                             alt="BANQ: Saving Goals">
                     </picture>
                 </div>
+
+                <!-- Analytics Screens -->
                 <div class="case-study-img">
                     <picture>
                         <source srcset="img/banq/analytics@1x.jpg" media="(max-width:767px)">
@@ -220,6 +306,8 @@
                             alt="BANQ: Analytics">
                     </picture>
                 </div>
+
+                <!-- AI Voice Assistant Screens -->
                 <div class="case-study-img">
                     <picture>
                         <source srcset="img/banq/ai-voice-assistant@1x.jpg" media="(max-width:767px)">
@@ -227,6 +315,8 @@
                             alt="BANQ: AI Voice Assistant">
                     </picture>
                 </div>
+
+                <!-- Budget Plan Alert Screens -->
                 <div class="case-study-img">
                     <picture>
                         <source srcset="img/banq/budget-plan-alert@1x.jpg" media="(max-width:767px)">
@@ -234,6 +324,8 @@
                             alt="BANQ: Budget Plan Alerts">
                     </picture>
                 </div>
+
+                <!-- My Profile Screens -->
                 <div class="case-study-img">
                     <picture>
                         <source srcset="img/banq/my-profile@1x.jpg" media="(max-width:767px)">
@@ -241,6 +333,8 @@
                             alt="BANQ: My Profile">
                     </picture>
                 </div>
+
+                <!-- Desktop Mockup Screens -->
                 <div class="case-study-img">
                     <picture>
                         <source srcset="img/banq/desktop-mockup@1x.jpg" media="(max-width:767px)">
@@ -248,6 +342,8 @@
                             alt="BANQ: Desktop Mockup">
                     </picture>
                 </div>
+
+                <!-- Thank You and Connect -->
                 <div class="case-study-img">
                     <picture>
                         <source srcset="img/banq/thank-you-for-watching@1x.jpg" media="(max-width:767px)">
@@ -255,26 +351,27 @@
                             alt="BANQ: Thank you for watching">
                     </picture>
                 </div>
-                <div id="prototype">
-                    <div class="case-study-text">
-                        <h2>See My Prototype</h2>
-                        <div>
-                            <p>Curious how BANQ looks in action? Click below to explore the full interactive prototype I created in Figma — built to bring the user experience to life.</p>
-                            <a href="https://www.figma.com/proto/Z1JRvxhsoMS792L3aNgxJa/Banq---Money-Saving-App?content-scaling=fixed&kind=proto&node-id=942-3108&page-id=942%3A1277&scaling=scale-down&starting-point-node-id=942%3A3108" target="_blank" class="btn banq-btn">View BANQ Prototype</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="challengesandsolutions">
-                    <div class="case-study-text">
-                        <h2>Challenges and Solutions</h2>
-                        <div>
-                            <p>Designing this app allowed me to branch outside of my comfort zone once again by exploring the world of AI and becoming familiar with it to a high standard to then integrate its likeness into BANQ. As an individual, I'm not so fond of AI and everything it encompasses, but this project allowed me to get exposed to the field and gain a strong understanding of the topic. As an aspiring UI Designer, I now know how crucial it is to stay up to date with trends, whether anyone personally likes them or not, this is what it takes to be a successful in the career.</p>
-                            <p>Furthermore, with BANQ, I thoroughly focused on my users' needs, specifically near their age range, to allow young users with the resources and tools they would need to efficiently save their money.</p>
-                            <p>If there was anything I would do differently going into the future, it would be to not allow my personal opinion stand in the way of doing what it takes to be the best I can be in my career. I'm so grateful that I had the opportunity to get exposed to AI the way I did, as I feel more prepared than ever to take on anything I set my mind to. This will be a lesson I'll always remember and carry with me in my future designing journey.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
+
+            <!-- Prototype Call-to-Action -->
+            <section class="case-study-section prototype-section">
+                <h1 class="section-label">See My Prototype</h1>
+                <p>
+                    Curious how BANQ looks in action?
+                </p>
+                <p>
+                    Click below to explore the full interactive prototype I created in Figma — built to bring the user experience to life.
+                </p>
+                <a href="https://www.figma.com/proto/Z1JRvxhsoMS792L3aNgxJa/Banq---Money-Saving-App?content-scaling=fixed&kind=proto&node-id=942-3108&page-id=942%3A1277&scaling=scale-down&starting-point-node-id=942%3A3108" target="_blank" class="btn banq-btn">View BANQ Prototype</a>
+            </section>
+
+            <!-- Challenges and Solutions -->
+            <section class="case-study-section">
+                <h1 class="section-label">Challenges and Solutions</h1>
+                <p>Designing this app allowed me to branch outside of my comfort zone once again by exploring the world of AI and becoming familiar with it to a high standard to then integrate its likeness into BANQ. As an individual, I'm not so fond of AI and everything it encompasses, but this project allowed me to get exposed to the field and gain a strong understanding of the topic. As an aspiring UI Designer, I now know how crucial it is to stay up to date with trends, whether anyone personally likes them or not, this is what it takes to be a successful in the career.</p>
+                <p>Furthermore, with BANQ, I thoroughly focused on my users' needs, specifically near their age range, to allow young users with the resources and tools they would need to efficiently save their money.</p>
+                <p>If there was anything I would do differently going into the future, it would be to not allow my personal opinion stand in the way of doing what it takes to be the best I can be in my career. I'm so grateful that I had the opportunity to get exposed to AI the way I did, as I feel more prepared than ever to take on anything I set my mind to. This will be a lesson I'll always remember and carry with me in my future designing journey.</p>
+            </section>
         </div>
     </main>
 
