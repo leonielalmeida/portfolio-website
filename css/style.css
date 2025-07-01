@@ -906,7 +906,7 @@ header .logo {
 
 /* Unique backgrounds per project */
 .seedly-card {
-  background: #ffe2dc; /* Soft coral tint for Seedly */
+  background: #ffcec4; /* Soft coral tint for Seedly */
 }
 
 .banq-card {
@@ -914,7 +914,7 @@ header .logo {
 }
 
 .cookly-card {
-  background: #ffd3dd; /* Soft pink tint for Cookly */
+  background: #ffc8d5; /* Soft pink tint for Cookly */
 }
 
 .seedly-card .button {
