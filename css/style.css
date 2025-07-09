@@ -1382,7 +1382,7 @@ html, body {
   gap: 4rem;
   max-width: 1200px;   /* or any width you like */
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
 }
 
 .cookly-ops-item {
@@ -1470,6 +1470,14 @@ html, body {
   color: #f27777;  /* match your pink accent */
   font-size: 0.95rem;
   margin-top: 1rem;
+}
+
+.iterations-section {
+  margin-top: 5.5rem;  /* adjust to taste: 3rem, 5rem, etc. */
+}
+
+.iterations-section ul {
+  margin-bottom: 6rem; /* 👈 adds a clear gap below the bullet list */
 }
 
 /* Add padding specifically for the User Flows section on Cookly */
