@@ -866,7 +866,7 @@ header .logo {
   background: #f5f5f5;
   border-radius: 16px;
   overflow: hidden;
-  padding: 4rem 4rem;
+  padding: 3rem 4rem;
   margin: 2.5rem 0;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
@@ -878,7 +878,7 @@ header .logo {
 }
 
 .card-image img {
-  max-width: 500px; /* or 550px — test what looks best */
+  max-width: 450px; /* or 550px — test what looks best */
 }
 
 .card-content {
@@ -1409,7 +1409,8 @@ html, body {
   gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 0rem 2rem;
+  margin-bottom: 6rem;
 }
 
 .persona-card {
@@ -1469,6 +1470,18 @@ html, body {
   color: #f27777;  /* match your pink accent */
   font-size: 0.95rem;
   margin-top: 1rem;
+}
+
+/* Add padding specifically for the User Flows section on Cookly */
+#userflows {
+  margin-top: 8rem;
+  margin-bottom: 0rem;
+}
+
+@media (max-width: 768px) {
+  #userflows {
+    padding: 3rem 1.5rem;  /* Slightly tighter on mobile */
+  }
 }
 
 /* Mobile: stack */
