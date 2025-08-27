@@ -630,6 +630,32 @@ body.seedly-page header .logo-wrapper {
   background: rgba(204, 128, 111, 0.1);
 }
 
+/* HalalReads nav & logo wrap - updated to green palette */
+body.halalreads-page header .main-nav a {
+  color: #687236; /* main green shade */
+}
+
+body.halalreads-page header .main-nav a:hover {
+  color: #3F4521; /* darker hover green */
+}
+
+body.halalreads-page header .main-nav a::after {
+  background-color: #caebbb; /* soft green accent (matches card background) */
+}
+
+body.halalreads-page header .main-nav a:hover::after {
+  background-color: #3F4521; /* darker hover */
+}
+
+body.halalreads-page header .main-nav a.active {
+  color: #58612c; /* strong green for active state */
+  font-weight: 600;
+}
+
+body.halalreads-page header .logo-wrapper {
+  background: rgba(106, 137, 54, 0.1); /* light tint of green (from #687236) */
+}
+
 /* BANQ nav & logo wrap */
 body.banq-page header .main-nav a {
   color: #2d2dc2; /* BANQ blue */
@@ -908,6 +934,10 @@ header .logo {
   background: #ffcec4; /* Soft coral tint for Seedly */
 }
 
+.halalreads-card {
+  background: #caebbb; /* Soft coral tint for Seedly */
+}
+
 .banq-card {
   background: #d2d7ff; /* Soft blue tint for BANQ */
 }
@@ -920,6 +950,10 @@ header .logo {
   background-color: #CC806F;
 }
 
+.halalreads-card .button {
+  background-color: #42aa6a;
+}
+
 .banq-card .button {
   background-color: #6364FF;
 }
@@ -930,6 +964,10 @@ header .logo {
 
 .seedly-card .button:hover {
   background-color: #bd6e5f;
+}
+
+.halalreads-card .button:hover {
+  background-color: #5fbd7b;
 }
 
 .banq-card .button:hover {
@@ -955,6 +993,22 @@ a.btn.seedly-btn:hover {
 
 a.btn.seedly-btn:focus,
 a.btn.seedly-btn:active { background-color: #bd6e5f !important; outline: none; }
+
+/* Only the HalalReads button gets these colors */
+a.btn.halalreads-btn {
+  background-color: #687236;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a.btn.halalreads-btn:hover {
+  background-color: #3F4521;
+  color: white;
+  transform: translateY(-2px);
+}
+
+a.btn.halalreads-btn:focus,
+a.btn.halalreads-btn:active { background-color: #3F4521 !important; outline: none; }
 
 /* Only the BANQ button gets these colors */
 a.btn.banq-btn {
@@ -1104,6 +1158,10 @@ Animations
   stroke: #ecd9d4;
   width: 65px;        /* ⬅️ slightly larger */
   height: 65px;       /* ⬅️ slightly larger */
+}
+
+.halalreads-page .scroll-arrow {
+  stroke: #638a3f;  /* darker color for better contrast */
 }
 
 .banq-page .scroll-arrow {
