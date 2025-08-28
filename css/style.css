@@ -648,7 +648,7 @@ body.halalreads-page header .main-nav a:hover::after {
 }
 
 body.halalreads-page header .main-nav a.active {
-  color: #58612c; /* strong green for active state */
+  color: #5E6831; /* strong green for active state */
   font-weight: 600;
 }
 
@@ -1434,7 +1434,7 @@ html, body {
 
 /* HalalReads Case Study Layout — vertical spacing */
 body.halalreads-page .case-study-section {
-  padding: 70px 0;   /* slightly reduced vertical space */
+  padding: 50px 0;   /* slightly reduced vertical space */
 }
 
 /* Remove top padding from the first section (Introduction) */
@@ -1442,9 +1442,28 @@ body.halalreads-page .case-study-section:first-of-type {
   padding-top: 0;
 }
 
+/* Extra spacing between Key Features and Disclaimer */
+body.halalreads-page .case-study-section ul + .note.disclaimer {
+  margin-top: 100px;  /* adds white space above the disclaimer */
+}
+
 /* Optional: reduce bottom padding on the last section so footer isn't too far away */
 body.halalreads-page .case-study-section:last-of-type {
   padding-bottom: 50px;
+}
+
+/* HalalReads section labels */
+body.halalreads-page h1.section-label {
+  color: #46682B;   /* dark olive for main sections */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+body.halalreads-page h6.section-label {
+  color: #777777;   /* lighter olive for sub-sections */
+  font-weight: 600;
+  text-transform: uppercase; /* optional: makes it distinct */
+  font-size: 0.75em;         /* slightly smaller */
 }
 
 /* Headings spacing */
@@ -1461,12 +1480,40 @@ body.halalreads-page .case-study-section ul {
   line-height: 1.7;
 }
 
+/* Extra spacing: Key Features → Disclaimer */
+body.halalreads-page .case-study-section .section-label + ul {
+  margin-bottom: 28px;
+}
+
+body.halalreads-page .note.disclaimer {
+  margin: 28px auto 36px;
+}
+
 /* Grids for IA diagrams, journeys, and screens */
 body.halalreads-page .media-grid,
 body.halalreads-page .screen-grid {
   display: grid;
   grid-gap: 32px;    /* space between images */
   margin-top: 32px;  /* space above grids */
+}
+
+/* Make IA/Journey images bigger on HalalReads page */
+body.halalreads-page .case-study-section picture img {
+  display: block;
+  max-width: 2000px;   /* increase max size */
+  width: 100%;        /* responsive scaling */
+  margin: 0 auto;     /* center align */
+}
+
+/* Disclaimer styling just for HalalReads pages */
+body.halalreads-page .note.disclaimer h1 {
+  color: #46682B;
+  font-size: 0.9em; 
+  font-weight: 550;
+  text-align: center;
+  margin: 10px auto;  /* reduce big h1 margins */
+  max-width: 900px; 
+  line-height: 1.4;   /* improve readability */
 }
 
 /* Cookly Overview / Problem / Solution - 3-column style */
