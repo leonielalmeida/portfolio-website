@@ -147,7 +147,7 @@
 
 
             <!-- Information Architecture & Journeys -->
-            <section class="case-study-section">
+            <section id="ia" class="case-study-section">
                 <h1 class="section-label">Information Architecture &amp; Journeys</h1>
                 <p>
                 I mapped core tasks for authors and readers to clarify navigation and content hierarchy before wireframing,
@@ -171,7 +171,7 @@
             </section>
 
             <!-- Key Flows & Screens -->
-            <section class="case-study-section">
+            <section id="flows" class="case-study-section">
                 <h1 class="section-label">Key Flows &amp; Screens</h1>
 
                 <h6 class="section-label">Author Dashboard</h6>
@@ -206,9 +206,10 @@
                 Halal Values &amp; Sensitivity rubric (content awareness &amp; positive content) to help readers write considerate,
                 community-aligned reviews.
                 </p>
-                <div class="screen-grid">
-                <img src="img/halalreads/review-form.png" alt="Values-guided review form">
-                </div>
+                <picture>
+                    <source srcset="img/halalreads/review-form@1x.jpg" media="(max-width:767px)">
+                    <img src="img/halalreads/review-form@2x.jpg" alt="HalalReads: Reader journey: Register → Preferences → Library → Review → Share.">
+                </picture>
 
                 <h6 class="section-label">Official Review Service</h6>
                 <p>
@@ -216,23 +217,27 @@
                 submission → reviewer assignment → download → optional publish flow help authors understand
                 expectations and next steps.
                 </p>
-                <div class="screen-grid">
-                <img src="img/halalreads/review-service.png" alt="Official Review Service options and flow">
-                </div>
+                <picture>
+                    <source srcset="img/halalreads/official-review-service@1x.jpg" media="(max-width:767px)">
+                    <img src="img/halalreads/official-review-service@2x.jpg" alt="HalalReads: Reader journey: Register → Preferences → Library → Review → Share.">
+                </picture>
             </section>
 
             <!-- Outcomes -->
-            <section class="case-study-section">
+            <section id="outcomes" class="case-study-section">
                 <h1 class="section-label">Outcomes</h1>
                 <ul class="bullets">
-                <li>Simplified author onboarding and book uploads with clearer steps and labels.</li>
-                <li>Consistent, values-guided reviews that encourage thoughtful feedback.</li>
-                <li>Dev-ready specs handed off for dashboards and the review service experience.</li>
+                    <li>Designed streamlined author onboarding and book upload flows that reduced friction and clarified metadata requirements.</li>
+                    <li>Built reader dashboards with progress tracking, favorites, and share prompts to drive engagement and community growth.</li>
+                    <li>Developed a values-guided review system that standardizes feedback through clear prompts and Halal Values & Sensitivity criteria.</li>
+                    <li>Created subscription and payment flows (via ThriveCart) that made plan management and billing transparent for both authors and readers.</li>
+                    <li>Launched the Official Review Service experience, including packages, ETAs, and reviewer workflow, giving authors professional credibility and targeted reach.</li>
+                    <li>Delivered dev-ready specs and wireframes, ensuring smooth handoff for implementation of dashboards and the review service.</li>
                 </ul>
             </section>
 
             <!-- Reflection -->
-            <section class="case-study-section">
+            <section id="reflection" class="case-study-section">
                 <h1 class="section-label">Reflection</h1>
                 <p>
                 This project strengthened my ability to extend an existing design system, align stakeholders,
@@ -242,7 +247,7 @@
             </section>
 
             <!-- Back to Work -->
-            <section class="case-study-section">
+            <section id="back-to-work" class="case-study-section">
                 <a class="btn halalreads-btn" href="index.html">← Back to Work</a>
             </section>
         </div>

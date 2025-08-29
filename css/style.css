@@ -1489,6 +1489,81 @@ body.halalreads-page .note.disclaimer {
   margin: 28px auto 36px;
 }
 
+/* Add spacing between sub-sections inside Key Flows & Screens */
+body.halalreads-page #flows h6.section-label {
+  margin-top: 40px;   /* less aggressive, but keeps sections distinct */
+  margin-bottom: 20px;
+}
+
+body.halalreads-page #flows picture {
+  display: block;
+  margin: 40px 0 80px; /* balanced space around screenshots */
+}
+
+/* Reduce spacing specifically between Background and IA sections */
+body.halalreads-page .background-flex {
+  margin-bottom: 40px; /* smaller gap below Background */
+}
+
+body.halalreads-page .case-study-section:first-of-type {
+  margin-top: 0; /* keep top of IA section tight */
+}
+
+/* Reduce vertical spacing inside Key Flows & Screens */
+body.halalreads-page .case-study-section h6.section-label {
+  margin-top: 40px;   /* was 60px+ before, now tighter */
+  margin-bottom: 16px;
+}
+
+body.halalreads-page .case-study-section ul.bullets {
+  margin-bottom: 16px;
+}
+
+body.halalreads-page .case-study-section p {
+  margin-bottom: 16px;
+}
+
+body.halalreads-page .case-study-section picture {
+  display: block;
+  margin: 20px 0 30px; /* less gap above and below images */
+}
+
+/* Reduce spacing between Key Flows & Screens and Outcomes */
+body.halalreads-page .case-study-section#flows {
+  padding-bottom: 40px; /* less space at the bottom */
+}
+
+body.halalreads-page .case-study-section#outcomes {
+  padding-top: 40px; /* less space at the top */
+}
+
+/* Reduce spacing between IA & Journeys and Key Flows & Screens */
+body.halalreads-page #ia {
+  padding-bottom: 30px;
+}
+
+body.halalreads-page #flows {
+  padding-top: 0px;
+}
+
+/* Outcomes spacing */
+body.halalreads-page #outcomes {
+  padding-top: 30px;    /* reduce top space before Outcomes */
+  padding-bottom: 40px; /* tighter bottom */
+}
+
+/* Reflection spacing */
+body.halalreads-page #reflection {
+  padding-top: 40px;    /* reduce gap from Outcomes */
+  padding-bottom: 40px; /* tighter bottom */
+}
+
+/* Back to Work spacing */
+body.halalreads-page #back-to-work {
+  padding-top: 30px;    /* smaller gap from Reflection */
+  padding-bottom: 30px; /* keeps footer closer */
+}
+
 /* Grids for IA diagrams, journeys, and screens */
 body.halalreads-page .media-grid,
 body.halalreads-page .screen-grid {
